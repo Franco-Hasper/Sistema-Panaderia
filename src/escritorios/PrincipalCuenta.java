@@ -39,6 +39,9 @@ public class PrincipalCuenta extends javax.swing.JInternalFrame {
 
     }
 
+    /**
+     * Establece el estado inicial de los elementos de la pestaña Cuenta.
+     */
     public void estadoInicialVentanaCuenta() {
         txtMontoInicial.setEnabled(false);
         btnGuardarCuenta.setEnabled(false);

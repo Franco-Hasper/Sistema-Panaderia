@@ -24,10 +24,7 @@ import principal.MaterialButton;
  */
 public class PrincipalCliente extends javax.swing.JInternalFrame {
 
-    //OperacionesCliente opC = new OperacionesCliente();
-//    OperacionesCuenta opCta = new OperacionesCuenta();
     OperacionesSecundariasVenta ot = new OperacionesSecundariasVenta();
-    //OperacionesRegistrarVenta oRV = new OperacionesRegistrarVenta();
     InterfacesGraficasCliente i = new InterfacesGraficasCliente();
     Frame j = new Frame();
     TablaCliente t = new TablaCliente();
@@ -60,6 +57,12 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
     public void setBtnSeleccionarCliente(MaterialButton btnSeleccionarCliente) {
         this.btnSeleccionarCliente = btnSeleccionarCliente;
     }
+    
+     /**
+     * Devuelve un objeto de la clase TablaCliente con el id de la fila
+     * seleccionada.
+     * @return
+     */
 
     public TablaCliente ObjetoTablaConDatos() {
         t.setTabla(tabla);

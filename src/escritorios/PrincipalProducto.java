@@ -49,6 +49,12 @@ public class PrincipalProducto extends javax.swing.JInternalFrame {
     public void setT(TablaProducto t) {
         this.t = t;
     }
+    
+     /**
+     * Devuelve un objeto de la clase TablaProducto con el id de la fila
+     * seleccionada.
+     * @return
+     */
 
     public TablaProducto ObjetoTablaConDatos() {
         t.setTabla(tabla);

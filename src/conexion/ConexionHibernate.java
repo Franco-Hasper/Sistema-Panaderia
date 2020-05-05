@@ -36,17 +36,19 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.exception.JDBCConnectionException;
 
-
 public class ConexionHibernate {
 
-    public static Session tomarConexion()  {
+    /**
+     * Añade todas las clases mapeadas a la sesion.
+     * @return
+     */
+    public static Session tomarConexion() {
         try {
-            
+
         } catch (JDBCConnectionException e) {
         }
         SessionFactory sf = new Configuration()
                 .configure("hibernate.cfg.xml")
-                //Cada vez que creo entidad debo agregarla mediante este metodo addannotatedclass
                 .addAnnotatedClass(Cliente.class)
                 .addAnnotatedClass(Direccion_Cliente.class)
                 .addAnnotatedClass(Direccion_Proveedor.class)

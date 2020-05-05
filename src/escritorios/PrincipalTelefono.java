@@ -280,10 +280,23 @@ public class PrincipalTelefono extends javax.swing.JInternalFrame {
         this.lblNombre = lblNombre;
     }
 
+    /**
+     * Devuelve un valor si la entidad es Proveedor y otro si la entidad es
+     * Cliente.
+     *
+     * @return
+     */
     public String getEntidad() {
         return entidad;
     }
 
+    /**
+     * permite alojar un valor en el atributo entidad dependiendo de que ventana
+     * realiza la apertura de Direcciones, sindo los valores posibles Proveedor
+     * o Cliente.
+     *
+     * @param entidad
+     */
     public void setEntidad(String entidad) {
         this.entidad = entidad;
     }

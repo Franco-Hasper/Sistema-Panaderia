@@ -34,7 +34,7 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
         setCambiarCliente(0);
     }
 
-    Integer cambiarCliente;
+    private Integer cambiarCliente;
 
     public Integer getCambiarCliente() {
         return cambiarCliente;

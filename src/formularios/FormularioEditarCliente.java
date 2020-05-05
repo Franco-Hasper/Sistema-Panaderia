@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
@@ -16,7 +17,7 @@ import principal.Main;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarCliente extends javax.swing.JDialog {
+public class FormularioEditarCliente extends javax.swing.JDialog implements Formularios{
 
     BoxesCliente b = new BoxesCliente();
     ABM_Cliente abm = new ABM_Cliente();
@@ -71,6 +72,7 @@ public class FormularioEditarCliente extends javax.swing.JDialog {
         this.txtRazonSocial = txtRazonSocial;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtNombre());

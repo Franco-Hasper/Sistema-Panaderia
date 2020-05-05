@@ -9,8 +9,10 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class SwingBrowser extends JFXPanel {
-//Variable encargada de renderizar el website
 
+    /**
+     * Variable encargada de renderizar el website
+     */
     private WebEngine engine;
 
     //Constructor de la clase
@@ -25,8 +27,10 @@ public class SwingBrowser extends JFXPanel {
         });
         setVisible(true);
     }
-//Método para cargar la URL de la página web
 
+    /**
+     * Método para cargar la URL de la página web
+     */
     public void loadURL(final String url) {
         Platform.runLater(new Runnable() {
             @Override

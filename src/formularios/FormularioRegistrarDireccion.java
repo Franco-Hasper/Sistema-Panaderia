@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
@@ -14,7 +15,7 @@ import clasesUtilidadGeneral.OperacionesUtiles;
  *
  * @author TELCOM MPC
  */
-public class FormularioRegistrarDireccion extends javax.swing.JDialog {
+public class FormularioRegistrarDireccion extends javax.swing.JDialog implements Formularios{
 
     String entidad;
 
@@ -72,6 +73,7 @@ public class FormularioRegistrarDireccion extends javax.swing.JDialog {
         this.txtnuemroDireccion = txtnuemroDireccion;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtDireccion());

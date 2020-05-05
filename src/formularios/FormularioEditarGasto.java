@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JEditorPane;
@@ -16,7 +17,7 @@ import rojeru_san.componentes.RSDateChooser;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarGasto extends javax.swing.JDialog {
+public class FormularioEditarGasto extends javax.swing.JDialog implements Formularios{
 
     OperacionesUtiles opU = new OperacionesUtiles();
     TablaGastos t = new TablaGastos();
@@ -63,6 +64,7 @@ public class FormularioEditarGasto extends javax.swing.JDialog {
         this.lblId = lblId;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtTotalGastado());

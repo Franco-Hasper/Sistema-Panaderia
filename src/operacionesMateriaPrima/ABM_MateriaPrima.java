@@ -100,9 +100,8 @@ public class ABM_MateriaPrima {
 
     /**
      * ejecutar transaccion eliminar
-     *
-     * @param f (objeto del formulario registrar materia prima)
      */
+    
     public boolean ejecutarEliminarIngresoMateriaPrima() {
         transaccionEliminarIngresoMateriaPrima();
         return true;

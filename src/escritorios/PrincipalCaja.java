@@ -18,19 +18,23 @@ import principal.Main;
  */
 public class PrincipalCaja extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form PrincipalCaja
-     */
     TablaCaja t = new TablaCaja();
     InterfacesGraficasCaja i = new InterfacesGraficasCaja();
     Frame j = new Frame();
     ABM_Caja abm = new ABM_Caja();
 
+    /**
+     * Creates new form PrincipalCaja
+     */
     public PrincipalCaja() {
         initComponents();
-
     }
 
+    /**
+     * Devuelve un objeto de la clase TablaCaja con el id de la fila
+     * seleccionada.
+     * @return
+     */
     public TablaCaja ObjetoTablaConDatos() {
         t.setTabla(tabla);
         t.setConsultaList("from CorteCaja");

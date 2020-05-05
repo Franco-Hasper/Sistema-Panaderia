@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import principal.Main;
  *
  * @author TELCOM MPC
  */
-public class FormularioRegistrarIngresoMateriaPrima extends javax.swing.JDialog {
+public class FormularioRegistrarIngresoMateriaPrima extends javax.swing.JDialog implements Formularios{
 
     ABM_MateriaPrima abm = new ABM_MateriaPrima();
     OperacionesUtiles opU = new OperacionesUtiles();
@@ -72,6 +73,7 @@ public class FormularioRegistrarIngresoMateriaPrima extends javax.swing.JDialog 
         this.lblID = lblID;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtPrecioTotal());

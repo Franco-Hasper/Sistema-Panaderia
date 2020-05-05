@@ -42,6 +42,12 @@ public class PrincipalGastos extends javax.swing.JInternalFrame {
     public void setT(TablaGastos t) {
         this.t = t;
     }
+    
+     /**
+     * Devuelve un objeto de la clase TablaGastos con el id de la fila
+     * seleccionada.
+     * @return
+     */
 
     public TablaGastos ObjetoTablaConDatos() {
         t.setTabla(tabla);

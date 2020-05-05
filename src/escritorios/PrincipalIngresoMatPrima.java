@@ -58,12 +58,12 @@ public class PrincipalIngresoMatPrima extends javax.swing.JInternalFrame {
         this.t = t;
     }
 
-    /**
-     * rellena los 2 atributos de la clase TablaMatetiaPrima con datos.
+    
+     /**
+     * Devuelve un objeto de la clase TablaIngresoMateriaPrima con el id de la
+     * fila seleccionada.
      *
-     * @return (un objeto de la clase TablaMatetiaPrima con un JTable de
-     * "PrincipalMateriaPrima" + un id Obtenido por consulta de la fila
-     * seleccionada)
+     * @return
      */
     public TablaIngresoMateriaPrima ObjetoTablaConDatos() {
         t.setTabla(tabla);

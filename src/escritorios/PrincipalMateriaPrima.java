@@ -14,16 +14,6 @@ import operacionesMateriaPrima.TablaMateriaPrima;
 import principal.Main;
 import principal.MaterialButton;
 
-/**
- * <h1>Clase PrincipalMateriaPrima</h1>
- * Clase encargada de generar la interfaz principal para administrar la seccion
- * "Materia Prima", tambien posee los metodos que generan los eventos de sus
- * botones vinculados.
- *
- * @author Hasper Franco
- * @version 0.1
- * @since 2020-01-15
- */
 public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
 
     TablaMateriaPrima t = new TablaMateriaPrima();
@@ -461,11 +451,9 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
     }
 
     /**
-     * rellena los 2 atributos de la clase TablaMatetiaPrima con datos.
-     *
-     * @return (un objeto de la clase TablaMatetiaPrima con un JTable de
-     * "PrincipalMateriaPrima" + un id Obtenido por consulta de la fila
-     * seleccionada)
+     * Devuelve un objeto de la clase TablaMateriaPrima con el id de la fila
+     * seleccionada.
+     * @return
      */
     public TablaMateriaPrima ObjetoTablaConDatos() {
         t.setConsultaList("from MateriaPrima_Marca_Proveedor");

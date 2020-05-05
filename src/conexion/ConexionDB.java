@@ -3,11 +3,14 @@ package conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
 public class ConexionDB {
 
     private static Connection con = null;
 
+    /**
+     * Establece los valores en los parametros y crea una nueva conexion.
+     * @return
+     */
     public static Connection tomarConexion() {
 
         try {

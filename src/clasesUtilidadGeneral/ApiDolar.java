@@ -10,6 +10,13 @@ import principal.Main;
 
 public class ApiDolar {
 
+    /**
+     * Establece una conexion con un enlace que proporciona el precio atual de
+     * venta del dolar libre e inserta dicho valor en un Label presente en la
+     * ventana principal de la aplicacion.
+     *
+     * @throws Exception
+     */
     public static void call_me() throws Exception {
 
         String url = "http://ws.geeklab.com.ar/dolar/get-dolar-json.php";

@@ -22,12 +22,10 @@ import principal.Main;
  */
 public class TablaCliente extends Tablas {
 
-    //****************
     public TablaCliente() {
         setEstadoConsulta(0);
     }
 
-//***********************
     public void ejecutarRellenarTabla(PrincipalCliente p) {
         setTabla(p.getTabla());
         setStringConsulta("from Cliente");
@@ -94,8 +92,6 @@ public class TablaCliente extends Tablas {
     }
 
     /**
-     * Permite obtener el id de la fila seleccionada en la tabla de la interfaz
-     * grafica(id traida desde la bd) de materia prima
      */
     public void obtenerIdTablaCliente() {
 

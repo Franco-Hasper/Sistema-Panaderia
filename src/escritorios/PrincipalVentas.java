@@ -50,6 +50,11 @@ public class PrincipalVentas extends javax.swing.JInternalFrame {
         this.t = t;
     }
 
+    /**
+     * Devuelve un objeto de la clase TablaVenta con el id de la fila
+     * seleccionada.
+     * @return
+     */
     public TablaVenta ObjetoTablaConDatos() {
         t.setTabla(tabla);
         t.setConsultaList("from Venta");

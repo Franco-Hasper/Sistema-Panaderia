@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JEditorPane;
@@ -16,7 +17,7 @@ import rojeru_san.componentes.RSDateChooser;
  *
  * @author TELCOM MPC
  */
-public class FormularioRegistrarNuevoGasto extends javax.swing.JDialog {
+public class FormularioRegistrarNuevoGasto extends javax.swing.JDialog implements Formularios{
 
     /**
      * Creates new form FormularioRegistrarNuevoGasto
@@ -55,6 +56,7 @@ public class FormularioRegistrarNuevoGasto extends javax.swing.JDialog {
         this.rSDateChooser = rSDateChooser;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtTotlaGasatado());

@@ -58,6 +58,12 @@ public class PrincipalProveedor extends javax.swing.JInternalFrame {
         this.t = t;
     }
 
+     /**
+     * Devuelve un objeto de la clase TablaProveedor con el id de la fila
+     * seleccionada.
+     * @return
+     */
+    
     public TablaProveedor ObjetoTablaConDatos() {
         t.setTabla(tabla);
         t.setConsultaList("from Proveedor");

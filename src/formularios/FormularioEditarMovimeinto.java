@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JEditorPane;
@@ -14,7 +15,7 @@ import principal.Main;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarMovimeinto extends javax.swing.JDialog {
+public class FormularioEditarMovimeinto extends javax.swing.JDialog implements Formularios{
 
     OperacionesUtiles opU = new OperacionesUtiles();
     ABM_Cuenta abm = new ABM_Cuenta();
@@ -28,6 +29,7 @@ public class FormularioEditarMovimeinto extends javax.swing.JDialog {
         initComponents();
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtMonto());

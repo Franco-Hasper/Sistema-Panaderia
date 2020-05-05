@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import rojeru_san.componentes.RSDateChooser;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog {
+public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog implements Formularios{
 
     /**
      * Creates new form FormEditarIngMtPr
@@ -73,6 +74,7 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog {
         this.dateFecha = dateFecha;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxttotalEnvases());

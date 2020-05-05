@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
@@ -15,7 +16,7 @@ import rojeru_san.componentes.RSDateChooser;
  *
  * @author FRANCO
  */
-public class FormularioEditarCorte extends javax.swing.JDialog {
+public class FormularioEditarCorte extends javax.swing.JDialog implements Formularios{
 
     OperacionesUtiles opU = new OperacionesUtiles();
     TablaCaja t = new TablaCaja();
@@ -31,6 +32,7 @@ public class FormularioEditarCorte extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtTotalEgresos());

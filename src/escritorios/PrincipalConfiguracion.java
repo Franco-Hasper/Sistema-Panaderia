@@ -242,7 +242,6 @@ public class PrincipalConfiguracion extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnColorMarronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColorMarronActionPerformed
-
         ct.setColor(142, 131, 54, 255, 255, 255);
         ct.setTema();
         i.colorInterfazEscritorio(Main.getPrincipalAdmin());

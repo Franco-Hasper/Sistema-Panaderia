@@ -22,31 +22,56 @@ import rojeru_san.componentes.RSDateChooser;
  */
 public class OperacionesUtiles {
 
-    String mensaje = "sin mensaje";
+    private String mensaje = "sin mensaje";
 
+    /**
+     * Devuelve un mensaje, implementado fecuentemente en los dialogos
+     * utilizados para informar al usario de el estado de una accion.
+     *
+     * @return mensaje
+     */
     public String getMensaje() {
         return mensaje;
     }
 
+    /**
+     * Aloja un mensaje, implementado fecuentemente en los dialogos utilizados
+     * para informar al usario de el estado de una accion.
+     *
+     * @param mensaje
+     */
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
     }
 
-    //agrega items al box especifcado
+    /**
+     * Agrega items a un JComboBox indicado en el parametro box.
+     *
+     * @param o
+     * @param box
+     */
     public void agregarItem(Object o, JComboBox box) {
         box.addItem(o.toString());
     }
 
+    /**
+     * Inserta un texto en el label especificado en el parametro label.
+     *
+     * @param o
+     * @param label
+     */
     public void agregarTexto(Object o, JTextField label) {
         label.setText(o.toString());
     }
 
-    /* VER ESTE
-    public void agregarFilaTabla(Vector vector,DefaultTableModel tablaGui){
-        Vector<Object>fila=new Vector<>();
-          tablaGui.addRow(fila);
-     }
-    
+    /**
+     * Verifica que todos los campos (JTextField) alojados en la lista tengan
+     * por lo menos un caracter de longitud si esta codicion no se cumple
+     * despliega un dialog con un mensaje especifico si todos los campos estan
+     * completos devuelve true.
+     *
+     * @param lista
+     * @return
      */
     public boolean verificarCamposTextoVacios(List lista) {
         List<JTextField> listCamposTexto
@@ -63,6 +88,15 @@ public class OperacionesUtiles {
         return false;
     }
 
+    /**
+     * Verifica que todos los campos (JTextField) alojados en la lista tengan
+     * por lo menos un caracter de longitud si esto no se cumple despliega un
+     * dialog con un mensaje del atributo mensaje si todos los campos estan
+     * completos devuelve true.
+     *
+     * @param lista
+     * @return
+     */
     public boolean verificarCamposTextoVaciosMensaje(List lista) {
         List<JTextField> listCamposTexto
                 = (List<JTextField>) lista;
@@ -78,6 +112,16 @@ public class OperacionesUtiles {
         return false;
     }
 
+    /**
+     * Verifica que todos los campos (JTextField) alojados en la lista tengan
+     * por lo menos un caracter de longitud si esto no se cumple despliega un
+     * dialog con un mensaje del parametro mensaje si todos los campos estan
+     * completos devuelve true.
+     *
+     * @param lista
+     * @param mensaje
+     * @return
+     */
     public boolean verificarCamposTextoVacios(List lista, String mensaje) {
         List<JTextField> listCamposTexto
                 = (List<JTextField>) lista;
@@ -93,6 +137,15 @@ public class OperacionesUtiles {
         return false;
     }
 
+    /**
+     * Verifica que un campo (JTextField) tenga por lo menos un caracter de
+     * longitud si esto no se cumple despliega un dialog con un mensaje del
+     * parametro mensaje si todos los campos estan completos devuelve true.
+     *
+     * @param campoTexto
+     * @param mensaje
+     * @return
+     */
     public boolean verificarCampoTextoVacio(JTextField campoTexto, String mensaje) {
 
         if (campoTexto.getText().length() == 0) {
@@ -103,7 +156,11 @@ public class OperacionesUtiles {
 
     }
 
-    //metodo para limpiar tabla
+    /**
+     * Limpia todas las filas de la tabla indicada.
+     *
+     * @param tabla
+     */
     public void removerFilas(DefaultTableModel tabla) {
         while (tabla.getRowCount() > 0) {
             tabla.removeRow(0);
@@ -111,7 +168,11 @@ public class OperacionesUtiles {
 
     }
 
-    //metodo para limpiar box
+    /**
+     * Limpia todos los items de el box indicado.
+     *
+     * @param box
+     */
     public void removerItemsBox(JComboBox box) {
         if (box.getItemCount() > 0) {
             box.removeAllItems();
@@ -119,16 +180,31 @@ public class OperacionesUtiles {
 
     }
 
+    /**
+     * Inserta la fecha actual en el box RSDateChooser.
+     *
+     * @param contenedor
+     */
     public void insertarFechaActualDateChooser(RSDateChooser contenedor) {
         Date fecha = new Date();
         contenedor.setDatoFecha(fecha);
     }
 
+    /**
+     * Limpia el campo de texto indicado.
+     *
+     * @param campo
+     */
     public static void borrarCampo(JTextField campo) {
         campo.setText(null);
     }
 
-    //mensaje indicando que se deben ingrear solamente Letras
+    /**
+     * Despliega un mensaje indicando que solo deben ingresarse Letras.
+     *
+     * @param evt
+     * @return
+     */
     public boolean advertenciaChar(java.awt.event.KeyEvent evt) {
         char validar = evt.getKeyChar();
         if (Character.isDigit(validar)) {
@@ -140,7 +216,12 @@ public class OperacionesUtiles {
         return false;
     }
 
-    //mensaje indicando que se deben ingrear solamente Numeros
+    /**
+     * Despliega un mensaje indicando que solo deben ingresarse números.
+     *
+     * @param evt
+     * @return
+     */
     public boolean advertenciaNum(java.awt.event.KeyEvent evt) {
         char validar = evt.getKeyChar();
         if (Character.isLetter(validar)) {
@@ -152,11 +233,21 @@ public class OperacionesUtiles {
         return false;
     }
 
-//metodo para advertencia
+    /**
+     * Devuelve un recuadro tipo default de la clase ToolKit para mostrar
+     * mensajes al usuario.
+     *
+     * @return
+     */
     public Toolkit getToolkit() {
         return Toolkit.getDefaultToolkit();
     }
 
+    /**
+     * Muestra un dialog de confirmacion.
+     *
+     * @return
+     */
     public static boolean mensajeEliminarRegistro() {
         if (JOptionPane.showConfirmDialog(null, "¿SEGURO QUE DESEA ELIMINAR EL REGISTRO?", "",
                 JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
@@ -165,6 +256,11 @@ public class OperacionesUtiles {
         return false;
     }
 
+    /**
+     * muestra un mensaje de confirmacion.
+     *
+     * @return
+     */
     public static boolean mensajeGuardarTema() {
         if (JOptionPane.showConfirmDialog(null, "¿SEGURO QUE DESE GUARDAR LOS CAMBIOS?", "",
                 JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
@@ -173,7 +269,11 @@ public class OperacionesUtiles {
         return false;
     }
 
-    //mensaje de onfiramcion para cerrar formulario
+    /**
+     * mustra un mensaje de confirmacion.
+     *
+     * @param formulario
+     */
     public static void mensajeCancelarFormulario(JDialog formulario) {
         if (JOptionPane.showConfirmDialog(null, "¿SEGURO QUE DESEA CANCELAR LA ACCION?", "",
                 JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
@@ -181,10 +281,21 @@ public class OperacionesUtiles {
         }
     }
 
+    /**
+     * Centra la interfaz pasada como parametro.
+     *
+     * @param ventana
+     */
     public void centrarVentana(Window ventana) {
         ventana.setLocationRelativeTo(null);
     }
 
+    /**
+     * Formatea la fecha indicada a dd-MM-yyyy (HH:mm.ss)
+     *
+     * @param fechaSinFormato
+     * @return
+     */
     public Object formatoFecha(Date fechaSinFormato) {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy (HH:mm:ss)");
@@ -192,6 +303,12 @@ public class OperacionesUtiles {
 
     }
 
+    /**
+     * * Formatea la fecha indicada a dd-MM-yyyy
+     *
+     * @param fechaSinFormato
+     * @return
+     */
     public Object formatoFechaSinHora(Date fechaSinFormato) {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -199,6 +316,13 @@ public class OperacionesUtiles {
 
     }
 
+    /**
+     * Devuelve true si la tabla pasada como parametro posee una fila
+     * seleccionada , de contrario retorna false.
+     *
+     * @param tabla
+     * @return
+     */
     public boolean verificarSeleccionFila(JTable tabla) {
         if (tabla.getSelectedRow() < 0) {
             JOptionPane.showMessageDialog(null, "SELECCIONE UAN FILA PARA LLEVAR A CABO LA ACCION",
@@ -208,14 +332,35 @@ public class OperacionesUtiles {
         return true;
     }
 
+    /**
+     * Reposiciona un JFrame en los ejes x,y indicados
+     *
+     * @param cuadroFrame
+     * @param x
+     * @param y
+     */
     public void reposicionarDialog(JFrame cuadroFrame, int x, int y) {
         cuadroFrame.setLocation(x, y);
     }
 
+    /**
+     * Redimensiona un Jframe con los valores x,y indicados.
+     *
+     * @param cuadroFrame
+     * @param x
+     * @param y
+     */
     public void redimensionarDialog(JFrame cuadroFrame, int x, int y) {
         cuadroFrame.setSize(x, y);
     }
 
+    /**
+     * Recibe un a fecha como parametro y la compara con la fecha actual, si son
+     * iguales retorna true, de lo contrario retorna false.
+     *
+     * @param fecha
+     * @return
+     */
     public boolean compararFecha(Date fecha) {
 
         Date date = new Date();
@@ -242,14 +387,24 @@ public class OperacionesUtiles {
     }
 
     /**
-     * devuelve una fila de la tabla especificada
+     * Devuelve el indice de una fila seleccionada en un JTable.
      *
-     * @param j (objeto de la clase JTable)
+     * @param j
+     * @return
      */
     public int seleccionarFila(JTable j) {
         return j.getSelectedRow();
     }
 
+    /**
+     * Recibe dos cadenas y las compara sin tener en cuenta a mayusculas y
+     * minusculas, si los resultados coinciden devuelve true, de lo contrario
+     * devuelve false.
+     *
+     * @param resultadoSql
+     * @param cadenaBusqueda
+     * @return
+     */
     public static boolean convertirResultado(String resultadoSql, String cadenaBusqueda) {
         Integer resutadoComparacion = resultadoSql.indexOf(cadenaBusqueda);
         Integer resutadoComparacionMinuscula = resultadoSql.toLowerCase().indexOf(cadenaBusqueda);

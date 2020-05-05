@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
@@ -14,7 +15,7 @@ import principal.Main;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarProducto extends javax.swing.JDialog {
+public class FormularioEditarProducto extends javax.swing.JDialog implements Formularios{
 
     TablaProducto t = new TablaProducto();
     ABM_Producto abm = new ABM_Producto();
@@ -49,6 +50,7 @@ public class FormularioEditarProducto extends javax.swing.JDialog {
         this.txtNombre = txtNombre;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtNombre());

@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
@@ -11,7 +12,7 @@ import clasesUtilidadGeneral.OperacionesUtiles;
 import clasesUtilidadGeneral.TextPrompt;
 import principal.Main;
 
-public class FormularioEditarMateriaPrima extends javax.swing.JDialog {
+public class FormularioEditarMateriaPrima extends javax.swing.JDialog implements Formularios{
 
     OperacionesUtiles opU = new OperacionesUtiles();
     ABM_MateriaPrima abm = new ABM_MateriaPrima();
@@ -56,12 +57,8 @@ public class FormularioEditarMateriaPrima extends javax.swing.JDialog {
         this.boxUdeMedida = boxUdeMedida;
     }
 
-    /**
-     * devuelve una lista con los campos de texto de esta interfaz grafica
-     * (Formulario Registrar Materia Prima)
-     *
-     * @return listCamposTexto
-     */
+  
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtNombreMAteriaPrima());

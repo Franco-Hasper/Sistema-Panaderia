@@ -1,5 +1,6 @@
 package formularios;
 
+import calsesPadre.Formularios;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
@@ -13,7 +14,7 @@ import operacionesTelefono.ABM_Telefono;
  *
  * @author TELCOM MPC
  */
-public class FormularioEditarTelefono extends javax.swing.JDialog {
+public class FormularioEditarTelefono extends javax.swing.JDialog implements Formularios{
 
     String entidad;
     ABM_Telefono abm = new ABM_Telefono();
@@ -45,6 +46,7 @@ public class FormularioEditarTelefono extends javax.swing.JDialog {
         this.txtTelefono = txtTelefono;
     }
 
+    @Override
     public List getListaCampos() {
         List listCamposTexto = new ArrayList();
         listCamposTexto.add(this.getTxtTelefono());

@@ -8,67 +8,99 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
- * <h1>Clase Consultas</h1>
  * Contiene atributos y metodos que se encargan de obtener resultados de la base
  * de datos.
- *
- * @author Hasper Franco
- * @version 0.1
- * @since 2019-11-14
  */
 public abstract class Consultas {
 
-    /**
-     * Atributo encargado de alojar una consulta sql para una lista de
-     * resultados.
-     */
     protected String consultaList;
-    /**
-     * Atributo encargado de alojar una consulta sql para un resultado unico.
-     */
+
     protected String consultaObject;
-    /**
-     * Atributo que aloja una lista obtenida en una consulta.
-     */
+
     protected List listaResultados;
-    /**
-     * Atributo que aloja un resutado unico corrspondiente a una clase
-     * especifica obtenida en una consulta.
-     */
+
     protected Object objetoResultado;
 
+    /**
+     * Devuelve un objeto con los datos de un unico resultado de la entidad
+     * consultada.
+     *
+     * @return objetoResultado;
+     */
     public Object getObjetoResultado() {
         return objetoResultado;
     }
 
+    /**
+     * Guarda un objeto con los datos de un unico resultado de la entidad
+     * consultada.
+     *
+     * @param objetoResultado;
+     */
     public void setObjetoResultado(Object objetoResultado) {
         this.objetoResultado = objetoResultado;
     }
 
+    /**
+     * Devuelve una consulta sql en formato String para una lista de resultados.
+     *
+     * @return consultaList;
+     */
     public String getConsultaList() {
         return consultaList;
     }
 
+    /**
+     * Guarda una consulta sql en formato String para una lista de resultados.
+     *
+     * @param consultaList ;
+     */
     public void setConsultaList(String consultaList) {
         this.consultaList = consultaList;
     }
 
+    /**
+     * Devuelve una consulta sql en formato String para un unico resultado.
+     *
+     * @return consultaObject;
+     */
     public String getConsultaObject() {
         return consultaObject;
     }
 
+    /**
+     * Guarda una consula sql en formato String para un unico resultado.
+     *
+     * @param consultaObject
+     */
     public void setConsultaObject(String consultaObject) {
         this.consultaObject = consultaObject;
     }
 
+    /**
+     * Devuelve una lista que permite alojar varios resultados de la entidad
+     * consultada.
+     *
+     * @return listaResultados;
+     */
     public List getListaResultados() {
         return listaResultados;
     }
 
+    /**
+     * Guarda una lista que permite alojar varios resultados de la entidad
+     * consultada.
+     *
+     * @param listaResultados
+     */
     public void setListaResultados(List listaResultados) {
         this.listaResultados = listaResultados;
     }
 
+    /**
+     * Abre una sesion con Hibernate, genera una consulta y guarda los
+     * resultados en atributo listaResultados.
+     */
     public void obtenerListaConsulta() {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -82,6 +114,10 @@ public abstract class Consultas {
 
     }
 
+    /**
+     * Abre una sesion con Hibernate, genera una consulta y guarda un unico
+     * resultado en atributo objetoResultado.
+     */
     public void obtenerObjetoConsulta() {
         Session miSesion = ConexionHibernate.tomarConexion();
         try {
