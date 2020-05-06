@@ -26,19 +26,22 @@ import org.hibernate.Session;
 import principal.Main;
 
 /**
- * <h1>Clase ABM_MateriaPrima</h1>
- * Contiene las 3 funciones "alta, baja y modificar" para la entidad materia
- * prima
- *
  * @author Hasper Franco
- * @version 0.1
- * @since 2020-01-16
  */
 public class ABM_Cliente extends Consultas {
 
     OperacionesUtiles opUtl = new OperacionesUtiles();
     JOptionPane jop = new JOptionPane();
 
+    /**
+     * Verifica que todos los campos obligatorios del formulario hayan sido
+     * completados y ejecuta el metodo transaccionRegistrarCliente y cierra el
+     * formulario,si la accion es exitosa retorna true, de lo contrario retorna
+     * false. false.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarRegistrarCliente(FormularioRegistrarCliente f) {
         //verificar que no hayan campos vacios
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
@@ -49,6 +52,15 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Verifica que todos los campos obligatorios del formulario hayan sido
+     * completados y ejecuta el metodo transaccionRegistrarDireccionCliente y
+     * cierra el formulario,si la accion es exitosa retorna true, de lo
+     * contrario retorna false.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarRegistrarDireccionCliente(FormularioRegistrarDireccion f) {
         //verificar que no hayan campos vacios
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
@@ -59,6 +71,12 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Ejeuta los metodos necesarios para eliminar una direccion del cliente
+     * especificado de la base de datos.
+     *
+     * @return
+     */
     public boolean ejecutarElminarDireccionCliente() {
         if (OperacionesUtiles.mensajeEliminarRegistro()) {
             String idCliente = Main.getPrincipalAdmin().getCliente().ObjetoTablaConDatos().getIdTabla().toString();
@@ -70,6 +88,12 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Ejeuta los metodos necesarios para eliminar un telefono del cliente
+     * especificado de la base de datos.
+     *
+     * @return
+     */
     public boolean ejecutarElminarTelefonoCliente() {
         if (OperacionesUtiles.mensajeEliminarRegistro()) {
             String idCliente = Main.getPrincipalAdmin().getCliente().ObjetoTablaConDatos().getIdTabla().toString();
@@ -81,6 +105,10 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Permite eliminar un telefono del cliente epecificado de la base datos de
+     * forma definitiva.
+     */
     public void transaccionEliminarTelefonoCliente() {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -112,6 +140,12 @@ public class ABM_Cliente extends Consultas {
         }
     }
 
+    /**
+     * permite actualizar los datos de un Cliente en la base de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarEditarCliente(FormularioEditarCliente f) {
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
             transaccionEditarCliente(f);
@@ -121,6 +155,13 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Permite actualizar los datos de la direccion del cliente especificado en
+     * la base de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarEditarDireccionCliente(FormularioEditarDireccion f) {
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
             String idCliente = Main.getPrincipalAdmin().getCliente().ObjetoTablaConDatos().getIdTabla().toString();
@@ -133,6 +174,13 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Permite actualizar los datos del telefono de un clientente especificado
+     * en la base de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarEditarTelefonoCliente(FormularioEditarTelefono f) {
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
             String idCliente = Main.getPrincipalAdmin().getCliente().ObjetoTablaConDatos().getIdTabla().toString();
@@ -145,6 +193,13 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Permite registrar un nuevo telefono de un cliente especificado en la base
+     * de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarRegistrarTelefonoCliente(FormularioRegistrarTelefono f) {
         //verificar que no hayan campos vacios
         if (opUtl.verificarCamposTextoVacios(f.getListaCampos())) {
@@ -155,11 +210,21 @@ public class ABM_Cliente extends Consultas {
         return false;
     }
 
+    /**
+     * Ejecuta el metodo transaccionEliminarCliente y retorna true.
+     *
+     * @return
+     */
     public boolean ejecutarEliminarCliente() {
         transaccionEliminarCliente();
         return true;
     }
 
+    /**
+     * Permite registrar un nuevo cliente en la base de datos.
+     *
+     * @param f
+     */
     public void transaccionRegistrarCliente(FormularioRegistrarCliente f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -247,6 +312,11 @@ public class ABM_Cliente extends Consultas {
 
     }
 
+    /**
+     * Prmite actualizar los datos del cliente especificado en la base de datos.
+     *
+     * @param f
+     */
     public void transaccionEditarCliente(FormularioEditarCliente f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -283,6 +353,12 @@ public class ABM_Cliente extends Consultas {
 
     }
 
+    /**
+     * Permite registra una nueva direccion para el cliente especificado en la
+     * base de datos.
+     *
+     * @param f
+     */
     public void transaccionRegistrarDireccionCliente(FormularioRegistrarDireccion f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -334,6 +410,12 @@ public class ABM_Cliente extends Consultas {
 
     }
 
+    /**
+     * Permite registrar un nuevo telefono para el cliente especificado en la
+     * base de datos.
+     *
+     * @param f
+     */
     public void transaccionRegistrarTelefonoCliente(FormularioRegistrarTelefono f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -367,6 +449,12 @@ public class ABM_Cliente extends Consultas {
 
     }
 
+    /**
+     * Permite actualizar la direccion del cleiente especificado en la base de
+     * datos.
+     *
+     * @param f
+     */
     public void transaccionEditarDireccionCliente(FormularioEditarDireccion f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -417,6 +505,12 @@ public class ABM_Cliente extends Consultas {
         }
     }
 
+    /**
+     * Permite actualizar la deireccion del cliente especificado en la bas e de
+     * datos.
+     *
+     * @param f
+     */
     public void transaccionEditarTelefonoCliente(FormularioEditarTelefono f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -457,6 +551,10 @@ public class ABM_Cliente extends Consultas {
         }
     }
 
+    /**
+     * Permite cambiar de estado a un cliente especificado, por lo que este ya
+     * no aparece en los resultados de busqueda.
+     */
     public void transaccionEliminarCliente() {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -475,6 +573,9 @@ public class ABM_Cliente extends Consultas {
 
     }
 
+    /**
+     * Elimina una direccion de cliente especificado de la base de datos.
+     */
     public void transaccionEliminarDireccionCliente() {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -503,5 +604,4 @@ public class ABM_Cliente extends Consultas {
             ex.printStackTrace();
         }
     }
-
 }

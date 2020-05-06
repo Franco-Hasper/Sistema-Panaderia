@@ -12,6 +12,17 @@ public class ConfiguracionTxt {
 
     ColorTema color = new ColorTema();
 
+    /**
+     * Recibe 6 valores, 3 RGB para crear color primario y 3 RGB para crear el
+     * color secundario de la interfaz grafica.
+     *
+     * @param pr
+     * @param pg
+     * @param pb
+     * @param sr
+     * @param sg
+     * @param sb
+     */
     public void setColor(Integer pr, Integer pg, Integer pb, Integer sr, Integer sg, Integer sb) {
         color.setPrincipalBlue(pb);
         color.setPrincipalGreen(pg);
@@ -23,6 +34,11 @@ public class ConfiguracionTxt {
         color.setColorSecundario(new Color(color.getSecundarioRed(), color.getSecundarioGreen(), color.getSecundarioBlue()));
     }
 
+    /**
+     * Inserta el color principal previamente definido en el panel prmario y los
+     * botones de la ventana principal y el color secundario en los paneles
+     * secundarios.
+     */
     public void setTema() {
         Main.getPrincipalAdmin().getPanel_1_primario().setBackground(color.getColorPrimario());
         Main.getPrincipalAdmin().getPanel_1_secundario().setBackground(color.getColorSecundario());
@@ -38,6 +54,10 @@ public class ConfiguracionTxt {
 
     }
 
+    /**
+     * recupera los valores almacenados en el archivo ConfiguracionColor.txt
+     * para definir el color de la interfaz grafica al iniciar una nueva sesion.
+     */
     public void leerArchivoConfig() {
         try {
             LinkedList valores = new LinkedList();
@@ -60,6 +80,10 @@ public class ConfiguracionTxt {
         }
     }
 
+    /**
+     * Abre el archivo ConfiguracionColor.txt e inserta en el los valores
+     * devueltos en el metodo contenidoConfig.
+     */
     public void guardarColor() {
         try {
             String ruta = "ConfiguracionColor.txt";
@@ -77,6 +101,12 @@ public class ConfiguracionTxt {
         }
     }
 
+    /**
+     * Devuelve una cadena con los valores que conponen el color principal y
+     * secundario de la interfaz grafica.
+     *
+     * @return
+     */
     public String contenidoConfig() {
         return color.getPrincipalRed() + "\n"
                 + color.getPrincipalGreen() + "\n"

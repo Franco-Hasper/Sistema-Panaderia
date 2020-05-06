@@ -16,7 +16,7 @@ import principal.Main;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Franco Hasper
  */
 public class TablaCaja extends Tablas {
 
@@ -24,12 +24,19 @@ public class TablaCaja extends Tablas {
         setEstadoConsulta(0);
     }
 
+    /**
+     * Ejecuata los metodos necesarios para rellenar la tabla de la ventana
+     * Caja.
+     *
+     * @param c
+     */
     public void ejecutarRellenarTabla(PrincipalCaja c) {
         setTabla(c.getTabla());
         setStringConsulta("from CorteCaja");
         evaluarEstadoConsulta();
         setCampoTexto(c.getTxtBuscar());
         rellenarTabla(getCampoTexto().getText());
+
     }
 
     public void rellenarTabla(String valorBusqueda) {
@@ -51,6 +58,10 @@ public class TablaCaja extends Tablas {
         }
     }
 
+    /**
+     * Toma los resultados de la consulta gastos y los agrega en la tabla
+     * salidas de la ventana Corte de Caja.
+     */
     public void rellenarTablaSalidasGasto() {
         DefaultTableModel tablaSalidas = (DefaultTableModel) getTabla().getModel();
         List lista = this.getListaResultados();
@@ -69,6 +80,10 @@ public class TablaCaja extends Tablas {
 
     }
 
+    /**
+     * Toma los resultados de la consulta ingreso materia prima y los agrega en
+     * la tabla salidas de la ventana Corte de Caja.
+     */
     public void rellenarTablaSalidasIngresoMatPrima() {
         DefaultTableModel tablaSalidas = (DefaultTableModel) getTabla().getModel();
         List lista = this.getListaResultados();
@@ -86,6 +101,12 @@ public class TablaCaja extends Tablas {
 
     }
 
+    /**
+     * Ejecuata los metodos necesarios para rellenar la tabla de la salidas en
+     * la ventana Corte de caja con los resultados de la consulta de gastos.
+     *
+     * @param p
+     */
     public void ejecutarRellenarTablaSalidasGastos(FormularioCorteDiario p) {
         setTabla(p.getTablaSlidas());
         setConsultaList("from Gasto");
@@ -93,6 +114,13 @@ public class TablaCaja extends Tablas {
         rellenarTablaSalidasGasto();
     }
 
+    /**
+     * Ejecuata los metodos necesarios para rellenar la tabla de la salidas en
+     * la ventana Corte de caja con los resultados de la consulta de ingreso de
+     * materia prima.
+     *
+     * @param p
+     */
     public void ejecutarRellenarTablaSalidasIngresosMateriaPrima(FormularioCorteDiario p) {
         setTabla(p.getTablaSlidas());
         setConsultaList("from IngresoMateriaPrima");
@@ -100,6 +128,11 @@ public class TablaCaja extends Tablas {
         rellenarTablaSalidasIngresoMatPrima();
     }
 
+    /**
+     * Toma los resultados de la consulta entradas y los agrega en la tabla
+     * entradas de la ventana Corte de Caja.
+     *
+     */
     public void rellenarTablaEntradas() {
 
         DefaultTableModel tablaEntradas = (DefaultTableModel) getTabla().getModel();
@@ -130,6 +163,12 @@ public class TablaCaja extends Tablas {
 
     }
 
+    /**
+     * Ejecuata los metodos necesarios para rellenar la tabla de la entradas en
+     * la ventana Corte de caja con los resultados de la consulta de entradas.
+     *
+     * @param p
+     */
     public void ejecutarRellenarTablaEntradas(FormularioCorteDiario p) {
         setTabla(p.getTablaEntradas());
         setConsultaList("from Venta");
@@ -137,6 +176,11 @@ public class TablaCaja extends Tablas {
         rellenarTablaEntradas();
     }
 
+    /**
+     * Compara los valores de una fila seleccionada en la tabla de Corte de Caja
+     * con los resultados obtenidos de la base datos, si estos coinciden guarda
+     * el resultado en la variable idCorteCaja.
+     */
     public void obtenerIdTablaCorteCaja() {
 
         int fila = Main.getPrincipalAdmin().getCaja().getTabla().getSelectedRow();

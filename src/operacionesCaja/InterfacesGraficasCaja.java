@@ -15,7 +15,7 @@ import principal.PrincipalAdministrador;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Franco Hasper
  */
 public class InterfacesGraficasCaja {
 

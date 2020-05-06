@@ -26,6 +26,12 @@ public class TablaCliente extends Tablas {
         setEstadoConsulta(0);
     }
 
+    /**
+     * Ejecuata los metodos necesarios para rellenar la tabla de la ventana
+     * PrincipalCliente.
+     *
+     * @param p
+     */
     public void ejecutarRellenarTabla(PrincipalCliente p) {
         setTabla(p.getTabla());
         setStringConsulta("from Cliente");
@@ -92,6 +98,9 @@ public class TablaCliente extends Tablas {
     }
 
     /**
+     * Compara los valores de una fila seleccionada en la tabla de
+     * PrincipalCliente con los resultados obtenidos de la base datos, si estos
+     * coinciden guarda el resultado en la variable idCliente.
      */
     public void obtenerIdTablaCliente() {
 

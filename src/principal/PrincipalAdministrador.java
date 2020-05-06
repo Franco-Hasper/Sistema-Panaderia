@@ -465,7 +465,7 @@ public class PrincipalAdministrador extends javax.swing.JFrame {
 
     private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
         // TODO add your handling code here:
-        InterfacesGraficasConfiguracion.ejecutarNuevaVentanaGasto();
+        InterfacesGraficasConfiguracion.ejecutarNuevaVentanaConfiguracion();
     }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     public JPanel getPanel_1_primario() {

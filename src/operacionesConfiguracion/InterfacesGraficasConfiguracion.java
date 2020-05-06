@@ -12,6 +12,12 @@ import principal.PrincipalAdministrador;
  */
 public class InterfacesGraficasConfiguracion {
 
+    /**
+     * Crea una nuea instancia para la clase PrincipalConfiguracion (intefaz
+     * grafica).
+     *
+     * @param p
+     */
     public void nuevaVentanaConfiguracion(PrincipalAdministrador p) {
         if (p.estacerrado(p.getConfiguracion())) {
             PrincipalConfiguracion c = new PrincipalConfiguracion();
@@ -28,11 +34,22 @@ public class InterfacesGraficasConfiguracion {
         p.getConfiguracion().toFront();
     }
 
-    public static void ejecutarNuevaVentanaGasto() {
+    /**
+     * Crea una instancia de la clase InterfacesGraficasConfiguracion para
+     * ejecutar el metodo nuevaVentanaConfiguracion necesario para generar una
+     * nueva ventana de la clase Configuracion.
+     */
+    public static void ejecutarNuevaVentanaConfiguracion() {
         InterfacesGraficasConfiguracion i = new InterfacesGraficasConfiguracion();
         i.nuevaVentanaConfiguracion(Main.getPrincipalAdmin());
     }
 
+    /**
+     * Modifica el color de los elementos en la ventana PrincipalConfiguracion
+     * segun el color de PrincipalAdministador panel.
+     *
+     * @param p
+     */
     public void colorInterfazEscritorio(PrincipalAdministrador p) {
         p.getConfiguracion().getPanel_1_primario().setBackground(Main.getPrincipalAdmin().getPanel_1_primario().getBackground());
         // p.getConfiguracion().getBtnColorAzul().setBackground(Main.getPrincipalAdmin().getPanel_1_primario().getBackground());

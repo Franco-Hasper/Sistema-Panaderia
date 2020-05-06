@@ -12,12 +12,19 @@ import principal.Main;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Franco Hasper
  */
 public class ABM_Caja {
 
     OperacionesUtiles opU = new OperacionesUtiles();
 
+    /**
+     * Ejecuta el metodo transaccionRegistrarCorteCaja y cierra el formulario,si
+     * la accion es exitosa retorna true, de lo contrario retorna false.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarRegistrarCoteCaja(FormularioCorteDiario f) {
 
         if (transaccionRegistrarCorteCaja(f)) {
@@ -28,6 +35,15 @@ public class ABM_Caja {
 
     }
 
+    /**
+     * Verifica que todos los campos obligatorios del formulario hayan sido
+     * completados y ejecuta el metodo transaccionEditarCorte y cierra el
+     * formulario,si la accion es exitosa retorna true, de lo contrario retorna
+     * false.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarEditarCorteCaja(FormularioEditarCorte f) {
         //verificar que no hayan campos vacios
         if (opU.verificarCamposTextoVacios(f.getListaCampos())) {
@@ -38,11 +54,21 @@ public class ABM_Caja {
         return false;
     }
 
+    /**
+     * Ejecuta el metodo transaccionEliminarCorteCaja y retorna true.
+     *
+     * @return
+     */
     public boolean ejecutarEliminarCorteCaja() {
         transaccionEliminarCorteCaja();
         return true;
     }
 
+    /**
+     * Permite actualizar los datos de CorteCaja en la base de datos.
+     *
+     * @param f
+     */
     public void transaccionEditarCorte(FormularioEditarCorte f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -67,6 +93,12 @@ public class ABM_Caja {
 
     }
 
+    /**
+     * Pemite registrar un nuevo Corte de caja en la base de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean transaccionRegistrarCorteCaja(FormularioCorteDiario f) {
         Session miSesion = ConexionHibernate.tomarConexion();
 
@@ -91,6 +123,10 @@ public class ABM_Caja {
         }
     }
 
+    /**
+     * Permite cambiar de estado a un corte de caja registrado en la base de
+     * datos.
+     */
     public void transaccionEliminarCorteCaja() {
 
         Session miSesion = ConexionHibernate.tomarConexion();

@@ -6,10 +6,15 @@ import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Franco Hasper
  */
 public class OperacionesSecundarias {
 
+    /**
+     * Suma todos los registros de la tabla entradas y guarda el resultado en el label total eltradas.
+     * @param f 
+     */
+    
     public void calcularTotalEntradas(FormularioCorteDiario f) {
         Double suma = 0.0;
         try {
@@ -24,6 +29,13 @@ public class OperacionesSecundarias {
 
     }
 
+    
+    
+    /**
+     * Suma todos los registros de la tabla salidas y guarda el resultado en el label total salidas.
+     * @param f 
+     */
+    
     public void calcularTotalSalidas(FormularioCorteDiario f) {
         Double suma = 0.0;
         try {
@@ -39,6 +51,13 @@ public class OperacionesSecundarias {
 
     }
 
+    
+    
+    /**
+     * Calcula el balance de el corte diario restando el total de entras de el total de salidas y guarda el resultado en el sabel balance.
+     * @param f 
+     */
+    
     public void calcularBalance(FormularioCorteDiario f) {
         Double suma = 0.0;
         Double entradas = 0.0;
@@ -55,6 +74,13 @@ public class OperacionesSecundarias {
 
     }
 
+    
+   /**
+     * Calcula el balance de el corte diario restando el total de entras de el total de salidas y guarda el resultado en el sabel balance y retorna el resultado de la resta.
+     * @param f
+     * @return 
+     */
+    
     public Double calcularBalance(FormularioEditarCorte f) {
         Double suma = 0.0;
         Double entradas = 0.0;
