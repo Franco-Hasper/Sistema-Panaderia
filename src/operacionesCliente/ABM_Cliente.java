@@ -37,7 +37,7 @@ public class ABM_Cliente extends Consultas {
      * Verifica que todos los campos obligatorios del formulario hayan sido
      * completados y ejecuta el metodo transaccionRegistrarCliente y cierra el
      * formulario,si la accion es exitosa retorna true, de lo contrario retorna
-     * false. false.
+     * false.
      *
      * @param f
      * @return
@@ -141,7 +141,8 @@ public class ABM_Cliente extends Consultas {
     }
 
     /**
-     * permite actualizar los datos de un Cliente en la base de datos.
+     * Ejeuta los metodos necesarios para poder editar un cliente especificado
+     * en la base de datos.
      *
      * @param f
      * @return

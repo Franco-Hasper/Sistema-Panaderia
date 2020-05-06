@@ -16,7 +16,7 @@ import principal.Main;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Hasper Franco
  */
 public class ABM_Cuenta extends Consultas {
 
@@ -24,6 +24,12 @@ public class ABM_Cuenta extends Consultas {
     InterfacesGraficasCuenta i = new InterfacesGraficasCuenta();
     OperacionesUtiles opu = new OperacionesUtiles();
 
+    /**
+     * Verifica que los campos de texto contengan caracteres y ejecuta
+     * transaccionRegistrarmovimientocuenta.
+     *
+     * @param p
+     */
     public void ejecutarRegistrarMovimientoCuenta(PrincipalCuenta p) {
         if (p.getTxtMonto().getText().length() == 0 || p.getEditPaneMotivo().getText().length() == 0) {
             showMessageDialog(null, "Debe ingresar un monto y un motivo");
@@ -32,6 +38,12 @@ public class ABM_Cuenta extends Consultas {
         }
     }
 
+    /**
+     * Ejeuta los metodos necesarios para eliminar un movineto de cueta
+     * especificado de la base de datos.
+     *
+     * @return
+     */
     public boolean ejecutarEliminarMovimiento() {
         String idCuenta = Main.getPrincipalAdmin().getCuenta().getBoxCuenta().getSelectedItem().toString();
         setConsultaList("from MovimientoCuenta where codigo_cuenta=" + idCuenta);
@@ -40,6 +52,14 @@ public class ABM_Cuenta extends Consultas {
         return true;
     }
 
+    /**
+     * Realiza una consulta de MovimientoCuenta en la bd dependiendo de el box
+     * seleccionado en la interfaz grafica, el box contiene una id que indica a
+     * que mc hace referncia, luego ejecuta el metodo
+     * actualizarBalanceMovimientoCuentaPortDelOrEdit.
+     *
+     * @param p
+     */
     public void ejecutarActualizarMovCuenta(PrincipalCuenta p) {
         String idCuenta = Main.getPrincipalAdmin().getCuenta().getBoxCuenta().getSelectedItem().toString();
         setConsultaList("from MovimientoCuenta where codigo_cuenta=" + idCuenta);
@@ -47,6 +67,13 @@ public class ABM_Cuenta extends Consultas {
         actualizarBalanceMovimientoCuentaPortDelOrEdit(p);
     }
 
+    /**
+     * Ejeuta los metodos necesarios para poder editar un movimiento de cuenta
+     * especificado en la base de datos.
+     *
+     * @param f
+     * @return
+     */
     public boolean ejecutarEditarMovCuenta(FormularioEditarMovimeinto f) {
         if (opu.verificarCamposTextoVacios(f.getListaCampos())) {
             String idCuenta = Main.getPrincipalAdmin().getCuenta().getBoxCuenta().getSelectedItem().toString();
@@ -59,6 +86,12 @@ public class ABM_Cuenta extends Consultas {
         return false;
     }
 
+    /**
+     * Permite actualizar los datos de un movimiento cuenta especificado en la
+     * base de datos.
+     *
+     * @param f
+     */
     public void transaccionEditarMovimiento(FormularioEditarMovimeinto f) {
 
         Session miSesion = ConexionHibernate.tomarConexion();
@@ -103,6 +136,12 @@ public class ABM_Cuenta extends Consultas {
 
     }
 
+    /**
+     * Prmite actualizar los datos de todos los movimientos de una cuenta luego
+     * de que se realize la edicion de un movimiento.
+     *
+     * @param p
+     */
     private void actualizarBalanceMovimientoCuentaPortDelOrEdit(PrincipalCuenta p) {
 
         String idMovCuenta;
@@ -148,6 +187,13 @@ public class ABM_Cuenta extends Consultas {
 
     }
 
+    /**
+     * Verifica que todos los campos obligatorios hayan sido completados y
+     * ejecuta el metodo transaccionRegistrarCuenta, a continuacio ejecuta
+     * transaccionRegistrarMovimientoCuenta.
+     *
+     * @param p
+     */
     public void ejecutarRegistrarCuenta(PrincipalCuenta p) {
         if (p.getTxtMontoInicial().getText().length() == 0) {
             showMessageDialog(null, "Debe ingresar un monto inicial");
@@ -161,6 +207,11 @@ public class ABM_Cuenta extends Consultas {
         }
     }
 
+    /**
+     * Permite registrar una nueva cuenta en la base de datos.
+     *
+     * @param p
+     */
     public void transaccionRegistrarCuenta(PrincipalCuenta p) {
         Session miSesion = ConexionHibernate.tomarConexion();
         try {
@@ -178,6 +229,11 @@ public class ABM_Cuenta extends Consultas {
         }
     }
 
+    /**
+     * Permite registrar un nuevo movimiento de cuenta en la base de datos.
+     *
+     * @param p
+     */
     public void transaccionRegistrarMovimientoCuenta(PrincipalCuenta p) {
         Session miSesion = ConexionHibernate.tomarConexion();
         try {
@@ -224,6 +280,9 @@ public class ABM_Cuenta extends Consultas {
         }
     }
 
+    /**
+     * Elimina de forma definitiva un movimiento en la base de datos.
+     */
     public void transaccionEliminarMovimiento() {
 
         Session miSesion = ConexionHibernate.tomarConexion();

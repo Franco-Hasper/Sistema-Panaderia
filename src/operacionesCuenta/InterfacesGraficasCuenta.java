@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package operacionesCuenta;
 
 import complementos.Cargar;
@@ -25,12 +20,16 @@ import principal.PrincipalAdministrador;
 
 /**
  *
- * @author TELCOM MPC
+ * @author Hasper Franco
  */
 public class InterfacesGraficasCuenta {
 
     TablaCuenta t = new TablaCuenta();
 
+    /**
+     * Crea una nuea instancia para la clase PrincipalCuenta (intefaz grafica).
+     * @param p 
+     */
     public void nuevaVentanaCuenta(PrincipalAdministrador p) {
         if (p.estacerrado(p.getCuenta())) {
             PrincipalCuenta c = new PrincipalCuenta();
@@ -48,6 +47,7 @@ public class InterfacesGraficasCuenta {
         p.getCuenta().toFront();
     }
 
+    
     public void colorInterfazEscritorio(PrincipalAdministrador p) {
         p.getCuenta().getPanel_1_primario().setBackground(Main.getPrincipalAdmin().getPanel_1_primario().getBackground());
         p.getCuenta().getTabla().setForeground(Main.getPrincipalAdmin().getPanel_1_primario().getBackground());
