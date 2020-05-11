@@ -15,7 +15,6 @@ public interface Formularios {
 
     /**
      * Devuleve una lista con los JTextField seleccionados del formulario.
-     *
      * @return listCamposTexto.
      */
     public List getListaCampos();
