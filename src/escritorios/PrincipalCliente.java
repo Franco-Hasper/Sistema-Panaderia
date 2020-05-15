@@ -86,17 +86,19 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         txtBuscar = new javax.swing.JTextField();
         btnnuevocliente = new principal.MaterialButton();
         btnCuenta = new principal.MaterialButton();
+        btnTelefonos = new principal.MaterialButton();
         btnnEditarCl = new principal.MaterialButton();
+        btnDirecciones = new principal.MaterialButton();
         btnEliminarCli = new principal.MaterialButton();
-        jPanel3 = new javax.swing.JPanel();
+        panel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
-        jPanel2 = new javax.swing.JPanel();
+        panel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         lblSalir = new javax.swing.JLabel();
-        btnTelefonos = new principal.MaterialButton();
-        btnDirecciones = new principal.MaterialButton();
+
+        setMaximumSize(new java.awt.Dimension(3840, 2160));
 
         panel_1_primario.setBackground(new java.awt.Color(204, 0, 0));
 
@@ -106,7 +108,7 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         btnSeleccionarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSeleccionarCliente.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
         btnSeleccionarCliente.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnSeleccionarCliente.setMinimumSize(new java.awt.Dimension(130, 35));
+        btnSeleccionarCliente.setMinimumSize(new java.awt.Dimension(65, 35));
         btnSeleccionarCliente.setPreferredSize(new java.awt.Dimension(130, 35));
         btnSeleccionarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +137,7 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         btnnuevocliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnnuevocliente.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
         btnnuevocliente.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnnuevocliente.setMinimumSize(new java.awt.Dimension(130, 35));
+        btnnuevocliente.setMinimumSize(new java.awt.Dimension(65, 35));
         btnnuevocliente.setPreferredSize(new java.awt.Dimension(130, 35));
         btnnuevocliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,11 +151,25 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         btnCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCuenta.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
         btnCuenta.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnCuenta.setMinimumSize(new java.awt.Dimension(130, 35));
+        btnCuenta.setMinimumSize(new java.awt.Dimension(65, 35));
         btnCuenta.setPreferredSize(new java.awt.Dimension(130, 35));
         btnCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCuentaActionPerformed(evt);
+            }
+        });
+
+        btnTelefonos.setBackground(new java.awt.Color(0, 0, 0,60));
+        btnTelefonos.setForeground(new java.awt.Color(255, 255, 255));
+        btnTelefonos.setText("TELEFONOS");
+        btnTelefonos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTelefonos.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnTelefonos.setMaximumSize(new java.awt.Dimension(130, 35));
+        btnTelefonos.setMinimumSize(new java.awt.Dimension(65, 35));
+        btnTelefonos.setPreferredSize(new java.awt.Dimension(130, 35));
+        btnTelefonos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelefonosActionPerformed(evt);
             }
         });
 
@@ -163,10 +179,25 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         btnnEditarCl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnnEditarCl.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
         btnnEditarCl.setMaximumSize(new java.awt.Dimension(130, 35));
+        btnnEditarCl.setMinimumSize(new java.awt.Dimension(0, 0));
         btnnEditarCl.setPreferredSize(new java.awt.Dimension(130, 35));
         btnnEditarCl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnnEditarClActionPerformed(evt);
+            }
+        });
+
+        btnDirecciones.setBackground(new java.awt.Color(0, 0, 0,60));
+        btnDirecciones.setForeground(new java.awt.Color(255, 255, 255));
+        btnDirecciones.setText("DIRECCIONES");
+        btnDirecciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDirecciones.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnDirecciones.setMaximumSize(new java.awt.Dimension(130, 35));
+        btnDirecciones.setMinimumSize(new java.awt.Dimension(65, 35));
+        btnDirecciones.setPreferredSize(new java.awt.Dimension(130, 35));
+        btnDirecciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDireccionesActionPerformed(evt);
             }
         });
 
@@ -176,7 +207,7 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
         btnEliminarCli.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarCli.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
         btnEliminarCli.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnEliminarCli.setMinimumSize(new java.awt.Dimension(130, 35));
+        btnEliminarCli.setMinimumSize(new java.awt.Dimension(65, 35));
         btnEliminarCli.setPreferredSize(new java.awt.Dimension(130, 35));
         btnEliminarCli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,15 +259,15 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
             tabla.getColumnModel().getColumn(8).setResizable(false);
         }
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
+        panel2.setLayout(panel2Layout);
+        panel2Layout.setHorizontalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
+        panel2Layout.setVerticalGroup(
+            panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
         );
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -253,11 +284,11 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
+        panel3.setLayout(panel3Layout);
+        panel3Layout.setHorizontalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -266,48 +297,20 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
                 .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        panel3Layout.setVerticalGroup(
+            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(panel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel3Layout.createSequentialGroup()
                         .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))
         );
-
-        btnTelefonos.setBackground(new java.awt.Color(0, 0, 0,60));
-        btnTelefonos.setForeground(new java.awt.Color(255, 255, 255));
-        btnTelefonos.setText("TELEFONOS");
-        btnTelefonos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnTelefonos.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnTelefonos.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnTelefonos.setMinimumSize(new java.awt.Dimension(130, 35));
-        btnTelefonos.setPreferredSize(new java.awt.Dimension(130, 35));
-        btnTelefonos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTelefonosActionPerformed(evt);
-            }
-        });
-
-        btnDirecciones.setBackground(new java.awt.Color(0, 0, 0,60));
-        btnDirecciones.setForeground(new java.awt.Color(255, 255, 255));
-        btnDirecciones.setText("DIRECCIONES");
-        btnDirecciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnDirecciones.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnDirecciones.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnDirecciones.setMinimumSize(new java.awt.Dimension(130, 35));
-        btnDirecciones.setPreferredSize(new java.awt.Dimension(130, 35));
-        btnDirecciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDireccionesActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout panel_1_primarioLayout = new javax.swing.GroupLayout(panel_1_primario);
         panel_1_primario.setLayout(panel_1_primarioLayout);
@@ -331,13 +334,13 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panel_1_primarioLayout.setVerticalGroup(
             panel_1_primarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_1_primarioLayout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_1_primarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,10 +352,10 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
                     .addComponent(btnTelefonos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDirecciones, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0, 60));
+        panel3.setBackground(new java.awt.Color(0, 0, 0, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -548,10 +551,10 @@ public class PrincipalCliente extends javax.swing.JInternalFrame {
     private principal.MaterialButton btnnuevocliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSalir;
+    private javax.swing.JPanel panel2;
+    private javax.swing.JPanel panel3;
     private javax.swing.JPanel panel_1_primario;
     private javax.swing.JTable tabla;
     private javax.swing.JTextField txtBuscar;

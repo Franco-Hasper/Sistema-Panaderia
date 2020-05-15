@@ -230,7 +230,7 @@ public class ABM_Cliente extends Consultas {
 
         Session miSesion = ConexionHibernate.tomarConexion();
 
-        try {
+       //try {
             miSesion.beginTransaction();
 
             Estado e = (Estado) miSesion.get(Estado.class, 1);
@@ -261,7 +261,7 @@ public class ABM_Cliente extends Consultas {
             TelefonoCliente tlc = new TelefonoCliente();
 
             tlc.setCodigoCliente(c);
-            tlc.setNuemero(Integer.parseInt(f.getTxtTelefono().getText()));
+            tlc.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono
                     = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();
@@ -307,9 +307,9 @@ public class ABM_Cliente extends Consultas {
             miSesion.getTransaction().commit();
 
             showMessageDialog(null, "Nuevo registro creado con exito");
-        } catch (Exception ex) {
+    //    } catch (Exception ex) {
             showMessageDialog(null, "Error al intentar crear  registro");
-        }
+   //     }
 
     }
 
@@ -430,7 +430,7 @@ public class ABM_Cliente extends Consultas {
             TelefonoCliente tlc = new TelefonoCliente();
 
             tlc.setCodigoCliente(c);
-            tlc.setNuemero(Integer.parseInt(f.getTxtTelefono().getText()));
+            tlc.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono
                     = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();
@@ -534,7 +534,7 @@ public class ABM_Cliente extends Consultas {
 
             TelefonoCliente tc = (TelefonoCliente) miSesion.get(TelefonoCliente.class, Integer.parseInt(idTelefonoCliente));
 
-            tc.setNuemero(Integer.valueOf(f.getTxtTelefono().getText()));
+            tc.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();
             for (TipoTelefono tt : lista_tipotelefono) {

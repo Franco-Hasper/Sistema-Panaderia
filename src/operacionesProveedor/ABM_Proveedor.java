@@ -251,7 +251,7 @@ public class ABM_Proveedor extends Consultas {
             TelefonoProveedor tlp = new TelefonoProveedor();
 
             tlp.setCodigoProveedor(p);
-            tlp.setNuemero(Integer.parseInt(f.getTxtTelefono().getText()));
+            tlp.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono
                     = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();
@@ -293,7 +293,7 @@ public class ABM_Proveedor extends Consultas {
 
             TelefonoProveedor tp = (TelefonoProveedor) miSesion.get(TelefonoProveedor.class, Integer.parseInt(idTelefonoProveedor));
 
-            tp.setNuemero(Integer.valueOf(f.getTxtTelefono().getText()));
+            tp.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();
             for (TipoTelefono tt : lista_tipotelefono) {
@@ -323,7 +323,7 @@ public class ABM_Proveedor extends Consultas {
             miSesion.save(p);
             TelefonoProveedor tp = new TelefonoProveedor();
             tp.setCodigoProveedor(p);
-            tp.setNuemero(Integer.parseInt(f.getTxtTelefono().getText()));
+            tp.setNuemero(f.getTxtTelefono().getText());
 
             List<TipoTelefono> lista_tipotelefono
                     = (List<TipoTelefono>) miSesion.createQuery("from TipoTelefono").list();

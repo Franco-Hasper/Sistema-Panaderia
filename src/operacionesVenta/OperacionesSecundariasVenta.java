@@ -122,7 +122,7 @@ public class OperacionesSecundariasVenta extends Consultas {
             for (int i = 0; i < f.getTablaListarProductos().getRowCount(); i++) {
                 total = total + (Double.valueOf(f.getTablaListarProductos().getValueAt(i, 3).toString()));
             }
-            f.getLblPrecioTotal().setText(total.toString());
+            f.getLblPrecioTotal().setText(new OperacionesUtiles().formatoDouble(total));
         } catch (ArrayIndexOutOfBoundsException e) {
             f.getLblPrecioTotal().setText("0.0");
         }
@@ -148,7 +148,7 @@ public class OperacionesSecundariasVenta extends Consultas {
             cantidad = Integer.valueOf(f.getTxtCantidad().getText());
             datos.add(f.getTxtCantidad().getText());
             resultado = precioUnitario * cantidad;
-            datos.add(resultado);
+            datos.add(new OperacionesUtiles().formatoDouble(resultado));
             tablaListaproductos.addRow(datos);
         }
     }
@@ -265,7 +265,7 @@ public class OperacionesSecundariasVenta extends Consultas {
             for (int i = 0; i < f.getTablaListarProductos().getRowCount(); i++) {
                 total = total + (Double.valueOf(f.getTablaListarProductos().getValueAt(i, 3).toString()));
             }
-            f.getLblPrecioTotal().setText(total.toString());
+            f.getLblPrecioTotal().setText(new OperacionesUtiles().formatoDouble(total));
         } catch (ArrayIndexOutOfBoundsException e) {
             f.getLblPrecioTotal().setText("0.0");
         }
@@ -291,7 +291,7 @@ public class OperacionesSecundariasVenta extends Consultas {
             cantidad = Integer.valueOf(f.getTxtCantidad().getText());
             datos.add(f.getTxtCantidad().getText());
             resultado = precioUnitario * cantidad;
-            datos.add(resultado);
+            datos.add(new OperacionesUtiles().formatoDouble(resultado));
             tablaListaproductos.addRow(datos);
         }
     }

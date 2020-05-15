@@ -25,7 +25,7 @@ public class TelefonoCliente {
     private Integer idTelefonoCliente;
 
     @Column(name = "numero")
-    private Integer nuemero;
+    private String nuemero;
 
     @ManyToOne
     @JoinColumn(name = "codigo_cliente")
@@ -38,7 +38,7 @@ public class TelefonoCliente {
     public TelefonoCliente() {
     }
 
-    public TelefonoCliente(Integer nuemero, Cliente codigoCliente, TipoTelefono codigoTipoTelefono) {
+    public TelefonoCliente(String nuemero, Cliente codigoCliente, TipoTelefono codigoTipoTelefono) {
         this.nuemero = nuemero;
         this.codigoCliente = codigoCliente;
         this.codigoTipoTelefono = codigoTipoTelefono;
@@ -52,11 +52,11 @@ public class TelefonoCliente {
         this.idTelefonoCliente = idTelefonoCliente;
     }
 
-    public Integer getNuemero() {
+    public String getNuemero() {
         return nuemero;
     }
 
-    public void setNuemero(Integer nuemero) {
+    public void setNuemero(String nuemero) {
         this.nuemero = nuemero;
     }
 
