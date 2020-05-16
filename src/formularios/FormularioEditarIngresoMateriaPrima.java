@@ -111,7 +111,7 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
         filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         btnGuardarCambios = new principal.MaterialButton();
-        btnGuardarCorte = new principal.MaterialButton();
+        btnCancelar = new principal.MaterialButton();
         panel_1_primario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -213,15 +213,15 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
             }
         });
 
-        btnGuardarCorte.setBackground(new java.awt.Color(0, 0, 0,60));
-        btnGuardarCorte.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarCorte.setText("CANCELAR");
-        btnGuardarCorte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnGuardarCorte.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnGuardarCorte.setPreferredSize(new java.awt.Dimension(70, 50));
-        btnGuardarCorte.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setBackground(new java.awt.Color(0, 0, 0,60));
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnCancelar.setPreferredSize(new java.awt.Dimension(70, 50));
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarCorteActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -256,7 +256,7 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
                     .addGroup(PanelIngresoMateriaPrimaLayout.createSequentialGroup()
                         .addComponent(btnGuardarCambios, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 54, Short.MAX_VALUE))
         );
         PanelIngresoMateriaPrimaLayout.setVerticalGroup(
@@ -286,7 +286,7 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoMateriaPrimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarCambios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(filler8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -408,9 +408,9 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
         Main.getPrincipalAdmin().getIngmatprima().setT(t);
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 
-    private void btnGuardarCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCorteActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         OperacionesUtiles.mensajeCancelarFormulario(this);
-    }//GEN-LAST:event_btnGuardarCorteActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtUdsPorEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUdsPorEnvaseActionPerformed
         // TODO add your handling code here:
@@ -484,8 +484,8 @@ public class FormularioEditarIngresoMateriaPrima extends javax.swing.JDialog imp
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel PanelIngresoMateriaPrima;
+    public static principal.MaterialButton btnCancelar;
     public static principal.MaterialButton btnGuardarCambios;
-    public static principal.MaterialButton btnGuardarCorte;
     private rojeru_san.componentes.RSDateChooser dateFecha;
     private javax.swing.Box.Filler filler10;
     private javax.swing.Box.Filler filler11;

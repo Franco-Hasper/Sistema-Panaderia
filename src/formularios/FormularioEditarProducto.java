@@ -68,7 +68,7 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
         filler15 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler16 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         btnGuardarCambios = new principal.MaterialButton();
-        btnGuardarCorte = new principal.MaterialButton();
+        btnCancelar = new principal.MaterialButton();
         panel_1_primario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -127,15 +127,15 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
             }
         });
 
-        btnGuardarCorte.setBackground(new java.awt.Color(0, 0, 0,60));
-        btnGuardarCorte.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarCorte.setText("CANCELAR");
-        btnGuardarCorte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnGuardarCorte.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnGuardarCorte.setPreferredSize(new java.awt.Dimension(70, 50));
-        btnGuardarCorte.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setBackground(new java.awt.Color(0, 0, 0,60));
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnCancelar.setPreferredSize(new java.awt.Dimension(70, 50));
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarCorteActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -152,7 +152,7 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(btnGuardarCambios, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(67, 67, 67)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +179,7 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardarCambios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(filler12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -266,9 +266,9 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
         }
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 
-    private void btnGuardarCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCorteActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         OperacionesUtiles.mensajeCancelarFormulario(this);
-    }//GEN-LAST:event_btnGuardarCorteActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -322,8 +322,8 @@ public class FormularioEditarProducto extends javax.swing.JDialog implements For
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static principal.MaterialButton btnCancelar;
     public static principal.MaterialButton btnGuardarCambios;
-    public static principal.MaterialButton btnGuardarCorte;
     private javax.swing.Box.Filler filler12;
     private javax.swing.Box.Filler filler13;
     private javax.swing.Box.Filler filler15;

@@ -47,7 +47,7 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaListaProductos = new javax.swing.JTable();
         lblImporteTotal = new javax.swing.JLabel();
-        btnGuardarCorte = new principal.MaterialButton();
+        btnSalir = new principal.MaterialButton();
         btnGenerarReporte = new principal.MaterialButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -149,15 +149,15 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
         lblImporteTotal.setForeground(new java.awt.Color(0, 0, 0));
         lblImporteTotal.setText("0");
 
-        btnGuardarCorte.setBackground(new java.awt.Color(0, 0, 0,60));
-        btnGuardarCorte.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardarCorte.setText("SALIR");
-        btnGuardarCorte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnGuardarCorte.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnGuardarCorte.setPreferredSize(new java.awt.Dimension(70, 50));
-        btnGuardarCorte.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setBackground(new java.awt.Color(0, 0, 0,60));
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("SALIR");
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSalir.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnSalir.setPreferredSize(new java.awt.Dimension(70, 50));
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarCorteActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -204,7 +204,7 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelIngresoMateriaPrimaLayout.createSequentialGroup()
                         .addComponent(btnGenerarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelIngresoMateriaPrimaLayout.createSequentialGroup()
@@ -240,7 +240,7 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
                 .addGap(35, 35, 35)
                 .addGroup(PanelIngresoMateriaPrimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardarCorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(91, 91, 91))
         );
 
@@ -279,9 +279,9 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
 
     }//GEN-LAST:event_PanelIngresoMateriaPrimaMouseDragged
 
-    private void btnGuardarCorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCorteActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         this.dispose();
-    }//GEN-LAST:event_btnGuardarCorteActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarReporteActionPerformed
        try {
@@ -387,7 +387,7 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel PanelIngresoMateriaPrima;
     public static principal.MaterialButton btnGenerarReporte;
-    public static principal.MaterialButton btnGuardarCorte;
+    public static principal.MaterialButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
