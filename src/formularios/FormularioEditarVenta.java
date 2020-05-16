@@ -80,7 +80,7 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
         boxTipoVenta = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        buttonSalir = new javax.swing.JButton();
+        lblSalir = new javax.swing.JLabel();
         txtCantidad = new javax.swing.JTextField();
         btnAgregar = new principal.MaterialButton();
         txtBuscar = new javax.swing.JTextField();
@@ -374,11 +374,11 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/edit_file_80px.png"))); // NOI18N
 
-        buttonSalir.setBackground(new java.awt.Color(153, 0, 0));
-        buttonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancel_60px.png"))); // NOI18N
-        buttonSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonSalirActionPerformed(evt);
+        lblSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancel_60px.png"))); // NOI18N
+        lblSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSalirMouseClicked(evt);
             }
         });
 
@@ -395,8 +395,7 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(boxTipoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panel_1_primarioLayout.setVerticalGroup(
             panel_1_primarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,9 +408,8 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
                     .addComponent(boxTipoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
             .addGroup(panel_1_primarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         txtCantidad.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.gray, java.awt.Color.lightGray, java.awt.Color.gray, java.awt.Color.lightGray));
@@ -654,10 +652,9 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
         t.ejecutarRellenarTablaProductoSinFechaBusqueda(this);
     }//GEN-LAST:event_txtBuscarKeyReleased
 
-    private void buttonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalirActionPerformed
-        // TODO add your handling code here:
+    private void lblSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseClicked
         this.dispose();
-    }//GEN-LAST:event_buttonSalirActionPerformed
+    }//GEN-LAST:event_lblSalirMouseClicked
     public JPanel getPanel_1_primario() {
         return panel_1_primario;
     }
@@ -706,7 +703,6 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
     private principal.MaterialButton btnQuitar;
     private javax.swing.JButton butonCancel;
     private javax.swing.JButton butonRegistar;
-    private javax.swing.JButton buttonSalir;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -721,6 +717,7 @@ public class FormularioEditarVenta extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblInfoSuma;
     private javax.swing.JLabel lblPrecioTotal;
+    private javax.swing.JLabel lblSalir;
     private javax.swing.JPanel panel_1_primario;
     private rojeru_san.componentes.RSDateChooser rSDateChooser;
     private javax.swing.JRadioButton radButonConsumidorFinal;
