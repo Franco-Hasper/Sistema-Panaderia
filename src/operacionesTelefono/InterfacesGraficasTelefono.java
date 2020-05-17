@@ -200,7 +200,7 @@ public class InterfacesGraficasTelefono {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasTelefono i = new InterfacesGraficasTelefono();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaTelefono() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

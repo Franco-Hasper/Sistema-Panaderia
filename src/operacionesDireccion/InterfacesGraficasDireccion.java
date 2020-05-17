@@ -40,7 +40,11 @@ public class InterfacesGraficasDireccion {
             int Height = p.getEscritorio().getHeight();
             p.getDireccion().remove(menupanel);
             p.getDireccion().setSize(width, Height);
-            p.getEscritorio().add(p.getDireccion());
+                        try {
+                 p.getEscritorio().add(p.getDireccion());
+            } catch (IllegalArgumentException e) {
+            }
+           
             p.getDireccion().show();
         }
         colorInterfazEscritorio(p);
@@ -232,7 +236,7 @@ public class InterfacesGraficasDireccion {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasDireccion i = new InterfacesGraficasDireccion();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaDireccion() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

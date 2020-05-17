@@ -30,7 +30,11 @@ public class InterfacesGraficasGastos {
             int Height = p.getEscritorio().getHeight();
             p.getGastos().remove(menupanel);
             p.getGastos().setSize(width, Height);
-            p.getEscritorio().add(p.getGastos());
+            try {
+                 p.getEscritorio().add(p.getGastos());
+            } catch (IllegalArgumentException e) {
+            }
+           
             infoTextPrompt(g);
             t.ejecutarRellenarTabla(g);
             p.getGastos().show();
@@ -105,7 +109,7 @@ public class InterfacesGraficasGastos {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasGastos i = new InterfacesGraficasGastos();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaGasto() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

@@ -39,7 +39,11 @@ public class InterfacesGraficasCuenta {
             int Height = p.getEscritorio().getHeight();
             p.getCuenta().remove(menupanel);
             p.getCuenta().setSize(width, Height);
-            p.getEscritorio().add(p.getCuenta());
+            try {
+                p.getEscritorio().add(p.getCuenta());
+            } catch (IllegalArgumentException e) {
+            }
+           
             infoTextPrompt(c);
             p.getCuenta().show();
         }
@@ -209,7 +213,7 @@ public class InterfacesGraficasCuenta {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasCuenta i = new InterfacesGraficasCuenta();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaCuenta() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

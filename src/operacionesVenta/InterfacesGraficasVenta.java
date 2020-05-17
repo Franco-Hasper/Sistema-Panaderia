@@ -251,7 +251,7 @@ public class InterfacesGraficasVenta {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasVenta i = new InterfacesGraficasVenta();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaVenta() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

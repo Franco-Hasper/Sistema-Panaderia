@@ -27,7 +27,11 @@ public class InterfacesGraficasConfiguracion {
             int Height = p.getEscritorio().getHeight();
             p.getConfiguracion().remove(menupanel);
             p.getConfiguracion().setSize(width, Height);
-            p.getEscritorio().add(p.getConfiguracion());
+            try {
+                 p.getEscritorio().add(p.getConfiguracion());
+            } catch (IllegalArgumentException e) {
+            }
+           
             p.getConfiguracion().show();
         }
         colorInterfazEscritorio(p);

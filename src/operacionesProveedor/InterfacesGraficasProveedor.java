@@ -27,7 +27,11 @@ public class InterfacesGraficasProveedor {
             int Height = p.getEscritorio().getHeight();
             p.getProveedor().remove(menupanel);
             p.getProveedor().setSize(width, Height);
-            p.getEscritorio().add(p.getProveedor());
+             try {
+                p.getEscritorio().add(p.getProveedor());
+            } catch (IllegalArgumentException e) {
+            }
+            
             infoTextPrompt(m);
             t.ejecutarRellenarTabla(m);
             p.getProveedor().show();
@@ -90,7 +94,7 @@ public class InterfacesGraficasProveedor {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasProveedor i = new InterfacesGraficasProveedor();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaProveedor() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

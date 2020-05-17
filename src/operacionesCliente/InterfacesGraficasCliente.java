@@ -38,7 +38,10 @@ public class InterfacesGraficasCliente {
             int Height = p.getEscritorio().getHeight();
             p.getCliente().remove(menupanel);
             p.getCliente().setSize(width, Height);
-            p.getEscritorio().add(p.getCliente());
+            try {
+                p.getEscritorio().add(p.getCliente());
+            } catch (IllegalArgumentException e) {
+            }
             infoTextPrompt(c);
             t.ejecutarRellenarTabla(c);
             p.getCliente().show();
@@ -143,7 +146,7 @@ public class InterfacesGraficasCliente {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasCliente i = new InterfacesGraficasCliente();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     /**
      * Crea 2 hilos para ejecutar un dialog cargando mientras la se inica la

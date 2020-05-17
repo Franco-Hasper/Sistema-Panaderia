@@ -31,7 +31,11 @@ public class InterfacesGraficasCaja {
             int Height = p.getEscritorio().getHeight();
             p.getCaja().remove(menupanel);
             p.getCaja().setSize(width, Height);
-            p.getEscritorio().add(p.getCaja());
+            try {
+                p.getEscritorio().add(p.getCaja());
+            } catch (IllegalArgumentException e) {
+            }
+            
             infoTextPrompt(c);
             t.ejecutarRellenarTabla(c);
             p.getCaja().show();
@@ -95,7 +99,7 @@ public class InterfacesGraficasCaja {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasCaja i = new InterfacesGraficasCaja();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaCaja() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

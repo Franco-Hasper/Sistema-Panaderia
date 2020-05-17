@@ -38,7 +38,11 @@ public class InterfacesGraficasMateriaPrima {
             int Height = p.getEscritorio().getHeight();
             p.getMatprima().remove(menupanel);
             p.getMatprima().setSize(width, Height);
-            p.getEscritorio().add(p.getMatprima());
+              try {
+                  p.getEscritorio().add(p.getMatprima());
+            } catch (IllegalArgumentException e) {
+            }
+           
             infoTextPrompt(m);
             t.ejecutarRellenarTabla(m);
             p.getMatprima().show();
@@ -175,7 +179,7 @@ public class InterfacesGraficasMateriaPrima {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasMateriaPrima i = new InterfacesGraficasMateriaPrima();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaMateriaPrima() {
         ExecutorService exe = Executors.newFixedThreadPool(2);

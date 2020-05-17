@@ -32,7 +32,11 @@ public class InterfacesGraficasProducto {
             int Height = p.getEscritorio().getHeight();
             p.getProducto().remove(menupanel);
             p.getProducto().setSize(width, Height);
-            p.getEscritorio().add(p.getProducto());
+            try {
+                 p.getEscritorio().add(p.getProducto());
+            } catch (IllegalArgumentException e) {
+            }
+          
             infoTextPrompt(m);
 
             t.ejecutarRellenarTabla(m);
@@ -117,7 +121,7 @@ public class InterfacesGraficasProducto {
 
     /*----------------------------SECCION MULIHILO--------------------------*/
     public static InterfacesGraficasProducto i = new InterfacesGraficasProducto();
-    public static Cargar c = new Cargar(null, true);
+    public static Cargar c = new Cargar();
 
     public static void ejecutarNuevaVentanaProducto() {
         ExecutorService exe = Executors.newFixedThreadPool(2);
