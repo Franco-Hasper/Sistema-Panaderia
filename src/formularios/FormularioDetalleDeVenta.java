@@ -121,7 +121,7 @@ public class FormularioDetalleDeVenta extends javax.swing.JDialog {
         lblFecha.setText("sin resultados");
 
         lbl.setForeground(new java.awt.Color(0, 0, 0));
-        lbl.setText("IMPORTE:");
+        lbl.setText(" IMPORTE:");
 
         tablaListaProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
