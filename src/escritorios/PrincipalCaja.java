@@ -71,6 +71,7 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jRadioButton1 = new javax.swing.JRadioButton();
         panel_1_primario = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -84,6 +85,8 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
         txtBuscar = new javax.swing.JTextField();
         btnnEditarC = new principal.MaterialButton();
         btnEliminarC = new principal.MaterialButton();
+
+        jRadioButton1.setText("jRadioButton1");
 
         panel_1_primario.setBackground(new java.awt.Color(204, 0, 0));
 
@@ -131,7 +134,7 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(917, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel3Layout.setVerticalGroup(
@@ -165,29 +168,22 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(107, 107, 107)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(736, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lblSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap(34, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(16, 16, 16)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         btnCrearC.setBackground(new java.awt.Color(0, 0, 0,60));
@@ -195,8 +191,9 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
         btnCrearC.setText("NUEVO CORTE");
         btnCrearC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCrearC.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnCrearC.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnCrearC.setPreferredSize(new java.awt.Dimension(130, 35));
+        btnCrearC.setMaximumSize(new java.awt.Dimension(240, 50));
+        btnCrearC.setMinimumSize(new java.awt.Dimension(100, 50));
+        btnCrearC.setPreferredSize(new java.awt.Dimension(240, 50));
         btnCrearC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearCActionPerformed(evt);
@@ -204,6 +201,8 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
         });
 
         txtBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.gray, java.awt.Color.lightGray, java.awt.Color.gray, java.awt.Color.lightGray));
+        txtBuscar.setMaximumSize(new java.awt.Dimension(310, 50));
+        txtBuscar.setMinimumSize(new java.awt.Dimension(100, 50));
         txtBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBuscarActionPerformed(evt);
@@ -223,8 +222,8 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
         btnnEditarC.setText("EDITAR CORTE");
         btnnEditarC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnnEditarC.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnnEditarC.setMaximumSize(new java.awt.Dimension(130, 35));
-        btnnEditarC.setMinimumSize(new java.awt.Dimension(130, 35));
+        btnnEditarC.setMaximumSize(new java.awt.Dimension(240, 50));
+        btnnEditarC.setMinimumSize(new java.awt.Dimension(100, 50));
         btnnEditarC.setPreferredSize(new java.awt.Dimension(130, 35));
         btnnEditarC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,7 +237,9 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
         btnEliminarC.setText("ELIMINAR CORTE");
         btnEliminarC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarC.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnEliminarC.setPreferredSize(new java.awt.Dimension(130, 35));
+        btnEliminarC.setMaximumSize(new java.awt.Dimension(240,50));
+        btnEliminarC.setMinimumSize(new java.awt.Dimension(100, 50));
+        btnEliminarC.setPreferredSize(new java.awt.Dimension(210, 50));
         btnEliminarC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarCActionPerformed(evt);
@@ -253,11 +254,11 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_1_primarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnCrearC, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCrearC, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnnEditarC, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnnEditarC, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminarC, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEliminarC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -271,7 +272,7 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
                     .addComponent(btnCrearC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnnEditarC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnEliminarC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -363,6 +364,7 @@ public class PrincipalCaja extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSalir;
     private javax.swing.JPanel panel_1_primario;

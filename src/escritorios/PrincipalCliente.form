@@ -46,21 +46,21 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnnuevocliente" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnnuevocliente" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnnEditarCl" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnnEditarCl" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnEliminarCli" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnEliminarCli" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnCuenta" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnCuenta" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnDirecciones" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnDirecciones" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnTelefonos" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnTelefonos" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnSeleccionarCliente" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Component id="btnSeleccionarCliente" pref="210" max="32767" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="txtBuscar" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="txtBuscar" pref="300" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Component id="panel2" alignment="0" max="32767" attributes="0"/>

@@ -540,7 +540,6 @@ public class FormularioRegistrarVenta extends javax.swing.JInternalFrame {
 
     private void btnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteActionPerformed
         // TODO add your handling code here:
-
         Main.getPrincipalAdmin().getVentas().setTipoFormulario(1);
         ot.buscarCliente();
     }//GEN-LAST:event_btnBuscarClienteActionPerformed

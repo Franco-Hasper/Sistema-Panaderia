@@ -157,8 +157,9 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
         btnNuevo.setBackground(new java.awt.Color(0,0,0,60));
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevo.setText("Nuevo Materia Prima");
+        btnNuevo.setAlignmentY(0.0F);
         btnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnNuevo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnNuevo.setFont(btnNuevo.getFont().deriveFont(btnNuevo.getFont().getStyle() | java.awt.Font.BOLD));
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoActionPerformed(evt);
@@ -181,7 +182,7 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("ELIMINAR");
         btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEliminar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnEliminar.setFont(btnEliminar.getFont().deriveFont(btnEliminar.getFont().getStyle() | java.awt.Font.BOLD));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -192,7 +193,7 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
         btnEditar.setText("EDITAR");
         btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnEditar.setFont(btnEditar.getFont().deriveFont(btnEditar.getFont().getStyle() | java.awt.Font.BOLD));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -203,7 +204,7 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
         btnNuevoIngreso.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevoIngreso.setText("NUEVO INGRESO");
         btnNuevoIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnNuevoIngreso.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnNuevoIngreso.setFont(btnNuevoIngreso.getFont().deriveFont(btnNuevoIngreso.getFont().getStyle() | java.awt.Font.BOLD));
         btnNuevoIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoIngresoActionPerformed(evt);
@@ -218,14 +219,14 @@ public class PrincipalMateriaPrima extends javax.swing.JInternalFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panel_1_primarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnNuevoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(btnNuevoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

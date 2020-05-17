@@ -32,17 +32,21 @@ public class OperacionesSecundariasVenta extends Consultas {
 
     public void nuevaVentanaAndCambiarEstadoBotones() {
         i.nuevaVentanaCliente(Main.getPrincipalAdmin());
-        Main.getPrincipalAdmin().getCliente().getBtnSeleccionarCliente().setVisible(true);
-        Main.getPrincipalAdmin().getCliente().getBtnEliminarCli().setVisible(false);
-        Main.getPrincipalAdmin().getCliente().getBtnnEditarCl().setVisible(false);
-        Main.getPrincipalAdmin().getCliente().getBtnnuevocliente().setVisible(false);
-        Main.getPrincipalAdmin().getCliente().getBtnCuenta().setVisible(false);
+        Main.getPrincipalAdmin().getCliente().getBtnSeleccionarCliente().setEnabled(true);
+        Main.getPrincipalAdmin().getCliente().getBtnEliminarCli().setEnabled(false);
+        Main.getPrincipalAdmin().getCliente().getBtnnEditarCl().setEnabled(false);
+        Main.getPrincipalAdmin().getCliente().getBtnnuevocliente().setEnabled(false);
+        Main.getPrincipalAdmin().getCliente().getBtnCuenta().setEnabled(false);
+        Main.getPrincipalAdmin().getCliente().getBtnDirecciones().setEnabled(false);
+        Main.getPrincipalAdmin().getCliente().getBtnTelefonos().setEnabled(false);
+        
+        
     }
 
     public void deshabilitarBtnSeleccionarCliente() {
         if (Main.getPrincipalAdmin().estacerrado(Main.getPrincipalAdmin().getCliente())) {
         } else {
-            Main.getPrincipalAdmin().getCliente().getBtnSeleccionarCliente().setVisible(false);
+            Main.getPrincipalAdmin().getCliente().getBtnSeleccionarCliente().setEnabled(false);
         }
     }
 
