@@ -73,9 +73,9 @@ public class ABM_Producto extends Consultas {
             p.setDescripcion(f.getTxtDescripcion().getText());
             miSesion.saveOrUpdate(p);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -112,10 +112,10 @@ public class ABM_Producto extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Producto registrado con exito");
+            new OperacionesUtiles().notificar(1);
 
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -131,9 +131,9 @@ public class ABM_Producto extends Consultas {
             p.setCodigoEstado(e);
             miSesion.saveOrUpdate(p);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }
@@ -170,9 +170,9 @@ public class ABM_Producto extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            DesktopNotify.showDesktopMessage("   exito   ", "   NUEVO PRECIO\n   REGSTRADO CON EXITO", DesktopNotify.SUCCESS, 7000);
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            DesktopNotify.showDesktopMessage("   error de conexion   ", "    ERROR AL INTENTAR\n   CREAR REGISTRO", DesktopNotify.ERROR, 7000);
+            new OperacionesUtiles().notificar(4);
             showMessageDialog(null, "");
         }
 

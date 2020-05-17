@@ -128,10 +128,9 @@ public class ABM_Cuenta extends Consultas {
             miSesion.saveOrUpdate(mc);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
-
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -177,11 +176,10 @@ public class ABM_Cuenta extends Consultas {
                 miSesion.saveOrUpdate(cnt);
                 miSesion.getTransaction().commit();
             }
-            DesktopNotify.showDesktopMessage("   informacion", "TODOS LOS REGISTROS\nFURON ACTUAZADOS", DesktopNotify.INFORMATION, 7000);
-
+            DesktopNotify.showDesktopMessage("   Informacion", "TODOS LOS REGISTROS\nFURON ACTUAZADOS", DesktopNotify.INFORMATION, 7000);
         } catch (Exception e) {
             e.printStackTrace();
-            DesktopNotify.showDesktopMessage("   error", "ERROR AL INTENTAR\nACTUALIZAR REGISTRO", DesktopNotify.ERROR, 7000);
+            DesktopNotify.showDesktopMessage("   Error", "ERROR AL INTENTAR\nACTUALIZAR REGISTRO", DesktopNotify.ERROR, 7000);
 
         }
 
@@ -222,10 +220,10 @@ public class ABM_Cuenta extends Consultas {
             c.setCodigoCliente(cl);
             miSesion.save(c);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Cuenta creada con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception e) {
             e.printStackTrace();
-            showMessageDialog(null, "Error al intentar crear cuenta");
+            new OperacionesUtiles().notificar(4);
         }
     }
 
@@ -273,10 +271,10 @@ public class ABM_Cuenta extends Consultas {
             miSesion.saveOrUpdate(cnt);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Movimiento registrado con exito");
+            new OperacionesUtiles().notificar(1);
             tabla.ejecutarRellenarTablaCuenta(p);
         } catch (Exception e) {
-            showMessageDialog(null, "Error al intentar registrar movimiento");
+            new OperacionesUtiles().notificar(4);
         }
     }
 
@@ -309,10 +307,10 @@ public class ABM_Cuenta extends Consultas {
             MovimientoCuenta mc = (MovimientoCuenta) miSesion.get(MovimientoCuenta.class, Integer.parseInt(idMovCuenta));
             miSesion.delete(mc);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
 
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }

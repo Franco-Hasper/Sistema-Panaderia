@@ -20,7 +20,6 @@ import formularios.FormularioRegistrarDireccion;
 import formularios.FormularioRegistrarTelefono;
 import java.util.List;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 import clasesUtilidadGeneral.OperacionesUtiles;
 import org.hibernate.Session;
 import principal.Main;
@@ -133,10 +132,10 @@ public class ABM_Cliente extends Consultas {
             miSesion.delete(tc);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(6);
         }
     }
 
@@ -230,7 +229,7 @@ public class ABM_Cliente extends Consultas {
 
         Session miSesion = ConexionHibernate.tomarConexion();
 
-       //try {
+        try {
             miSesion.beginTransaction();
 
             Estado e = (Estado) miSesion.get(Estado.class, 1);
@@ -306,10 +305,11 @@ public class ABM_Cliente extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
-    //    } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
-   //     }
+            new OperacionesUtiles().notificar(1);
+        } catch (Exception ex) {
+            new OperacionesUtiles().notificar(4);
+
+        }
 
     }
 
@@ -347,9 +347,9 @@ public class ABM_Cliente extends Consultas {
             miSesion.saveOrUpdate(c);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -404,9 +404,9 @@ public class ABM_Cliente extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -443,9 +443,9 @@ public class ABM_Cliente extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -499,10 +499,10 @@ public class ABM_Cliente extends Consultas {
             miSesion.saveOrUpdate(dc);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
     }
 
@@ -546,9 +546,10 @@ public class ABM_Cliente extends Consultas {
             miSesion.saveOrUpdate(tc);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
             ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
     }
 
@@ -567,9 +568,9 @@ public class ABM_Cliente extends Consultas {
             c.setCodigoEstado(e);
             miSesion.saveOrUpdate(c);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }
@@ -599,10 +600,10 @@ public class ABM_Cliente extends Consultas {
             miSesion.delete(dc);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(6);
         }
     }
 }

@@ -62,11 +62,11 @@ public class ABM_Gasto {
             miSesion.save(g);
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Producto registrado con exito");
+            new OperacionesUtiles().notificar(1);
 
             return true;
         } catch (Exception e) {
-            showMessageDialog(null, "Ocurrio un error al intenetar crear el registro");
+            new OperacionesUtiles().notificar(4);
             return false;
         }
 
@@ -90,9 +90,9 @@ public class ABM_Gasto {
             }
             miSesion.saveOrUpdate(g);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+          new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -108,9 +108,9 @@ public class ABM_Gasto {
             g.setCodigoEstado(e);
             miSesion.saveOrUpdate(g);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }

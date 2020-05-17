@@ -1,5 +1,6 @@
 package operacionesVenta;
 
+import clasesUtilidadGeneral.OperacionesUtiles;
 import conexion.ConexionHibernate;
 import entidades.Cliente;
 import entidades.Estado;
@@ -11,7 +12,6 @@ import formularios.FormularioEditarVenta;
 import formularios.FormularioEstadoVenta;
 import formularios.FormularioRegistrarVenta;
 import java.util.List;
-import static javax.swing.JOptionPane.showMessageDialog;
 import org.hibernate.Session;
 import principal.Main;
 
@@ -86,9 +86,9 @@ public class ABM_Venta {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Venta registrado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception e) {
-            showMessageDialog(null, "Error al intentar registrar venta");
+            new OperacionesUtiles().notificar(4);
             e.printStackTrace();
         }
 
@@ -120,9 +120,9 @@ public class ABM_Venta {
             }
             miSesion.saveOrUpdate(v);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "El estado del registro se modifico con exito");
+           new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -177,9 +177,9 @@ public class ABM_Venta {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception e) {
-            showMessageDialog(null, "Error al intentar modificar registro");
+            new OperacionesUtiles().notificar(5);
             e.printStackTrace();
         }
 

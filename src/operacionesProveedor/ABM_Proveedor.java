@@ -17,7 +17,6 @@ import formularios.FormularioRegistrarProveedor;
 import formularios.FormularioRegistrarTelefono;
 import java.util.List;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 import clasesUtilidadGeneral.OperacionesUtiles;
 import org.hibernate.Session;
 import principal.Main;
@@ -124,10 +123,10 @@ public class ABM_Proveedor extends Consultas {
             miSesion.saveOrUpdate(dp);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+           new OperacionesUtiles().notificar(2);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
     }
 
@@ -177,9 +176,9 @@ public class ABM_Proveedor extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -231,10 +230,10 @@ public class ABM_Proveedor extends Consultas {
             miSesion.delete(tp);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(6);
         }
     }
 
@@ -264,9 +263,9 @@ public class ABM_Proveedor extends Consultas {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -305,9 +304,9 @@ public class ABM_Proveedor extends Consultas {
             miSesion.saveOrUpdate(tp);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito //Revisar metodo ObtenerIdTelefono");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
     }
 
@@ -357,9 +356,9 @@ public class ABM_Proveedor extends Consultas {
             }
             miSesion.save(d);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+           new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -382,9 +381,9 @@ public class ABM_Proveedor extends Consultas {
             Direccion_Proveedor dp = (Direccion_Proveedor) miSesion.get(Direccion_Proveedor.class, Integer.parseInt(idDireccionProveedor));
             miSesion.delete(dp);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(6);
         }
     }
 
@@ -398,9 +397,9 @@ public class ABM_Proveedor extends Consultas {
             p.setNombre(f.getTxteditarNombre().getText());
             miSesion.saveOrUpdate(p);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -416,9 +415,9 @@ public class ABM_Proveedor extends Consultas {
             p.setCodigoEstado(e);
             miSesion.saveOrUpdate(p);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }

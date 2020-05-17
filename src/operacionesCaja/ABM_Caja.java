@@ -5,7 +5,6 @@ import entidades.CorteCaja;
 import entidades.Estado;
 import formularios.FormularioCorteDiario;
 import formularios.FormularioEditarCorte;
-import static javax.swing.JOptionPane.showMessageDialog;
 import clasesUtilidadGeneral.OperacionesUtiles;
 import org.hibernate.Session;
 import principal.Main;
@@ -86,9 +85,9 @@ public class ABM_Caja {
             }
             miSesion.saveOrUpdate(c);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -115,10 +114,10 @@ public class ABM_Caja {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Corte registrado con exito");
+            new OperacionesUtiles().notificar(1);
             return true;
         } catch (Exception e) {
-            showMessageDialog(null, "Ocurrio un error al intenetar crear el registro");
+            new OperacionesUtiles().notificar(4);
             return false;
         }
     }
@@ -139,9 +138,9 @@ public class ABM_Caja {
             c.setCodigoEstado(e);
             miSesion.saveOrUpdate(c);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }

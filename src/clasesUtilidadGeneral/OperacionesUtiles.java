@@ -1,5 +1,7 @@
 package clasesUtilidadGeneral;
 
+import ds.desktop.notify.DesktopNotify;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 import java.text.DateFormat;
@@ -8,6 +10,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -430,6 +433,41 @@ public class OperacionesUtiles {
         separadoresPersonalizados.setDecimalSeparator('.');
         DecimalFormat formato = new DecimalFormat("#.00", separadoresPersonalizados);
         return formato.format(valor);
+    }
+
+    /**
+     * Utiliza la niblioteca DesktopNotify para enviar una notificacion al
+     * usuario.
+     *
+     * @param tipo 1 exitoReistrar, 2 exitoEditar, 3 exitoEliminar, 4
+     * errorRegistrar, 5 errorEditar, 6 erroreliminar.
+     */
+    public void notificar(Integer tipo) {
+        Image iconoSucces = new ImageIcon(getClass().getResource("/imagenes/succ.png")).getImage();
+        Image iconoError = new ImageIcon(getClass().getResource("/imagenes/error.png")).getImage();
+        switch (tipo) {
+
+            case 1:
+
+                DesktopNotify.showDesktopMessage("Accion Exitosa", "Nuevo registro creado con exito", 0, iconoSucces, null, 7000);
+                break;
+            case 2:
+                DesktopNotify.showDesktopMessage("Accion Exitosa", "Registro actualizado con exito", 0, iconoSucces, null, 7000);
+                break;
+            case 3:
+                DesktopNotify.showDesktopMessage("Accion Exitosa", "Registro eliminado con exito", 0, iconoSucces, null, 7000);
+                break;
+            case 4:
+                DesktopNotify.showDesktopMessage("Error", "No se pudo completar el registro", 0, iconoError, null, 7000);
+                break;
+            case 5:
+                DesktopNotify.showDesktopMessage("Error", "No se pudo actualizar el registro", 0, iconoError, null, 7000);
+                break;
+            case 6:
+                DesktopNotify.showDesktopMessage("Error", "No se pudo eliminar el registro", 0, iconoError, null, 7000);
+                break;
+        }
+
     }
 
 }

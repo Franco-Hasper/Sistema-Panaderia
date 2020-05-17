@@ -24,7 +24,6 @@ import principal.Main;
 import principal.PrincipalAdministrador;
 
 /**
- * <h1>Clase ABM_MateriaPrima</h1>
  * Contiene las 3 funciones "alta, baja y modificar" para la entidad materia
  * prima
  *
@@ -180,9 +179,9 @@ public class ABM_MateriaPrima {
 
             miSesion.getTransaction().commit();
 
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar crear  registro");
+            new OperacionesUtiles().notificar(4);
         }
 
     }
@@ -232,9 +231,9 @@ public class ABM_MateriaPrima {
             }
             miSesion.saveOrUpdate(mtmrpr);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar actualizar  registro");
+            new OperacionesUtiles().notificar(5);
         }
 
     }
@@ -254,9 +253,9 @@ public class ABM_MateriaPrima {
             m.setCodigoEstado(e);
             miSesion.saveOrUpdate(m);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
+            new OperacionesUtiles().notificar(6);
         }
 
     }
@@ -278,10 +277,10 @@ public class ABM_MateriaPrima {
             miSesion.save(g);
 
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Nuevo registro creado con exito");
+            new OperacionesUtiles().notificar(1);
 
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(jop, "Error al intentar crear  registro :" + ex.getMessage(), "Informacion", JOptionPane.ERROR_MESSAGE);
+            new OperacionesUtiles().notificar(4);
 
         }
 
@@ -301,10 +300,9 @@ public class ABM_MateriaPrima {
             im.setCodigoEstado(e);
             miSesion.saveOrUpdate(im);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro eliminado con exito");
+            new OperacionesUtiles().notificar(3);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al Intentar eliminar registro");
-            JOptionPane.showMessageDialog(jop, "Error :" + ex.getMessage(), "Informacion", JOptionPane.ERROR_MESSAGE);
+           new OperacionesUtiles().notificar(6);
         }
 
     }
@@ -323,9 +321,9 @@ public class ABM_MateriaPrima {
             im.setFecha(f.getDateFecha().getDatoFecha());
             miSesion.saveOrUpdate(im);
             miSesion.getTransaction().commit();
-            showMessageDialog(null, "Registro editado con exito");
+            new OperacionesUtiles().notificar(2);
         } catch (Exception ex) {
-            showMessageDialog(null, "Error al intentar actualizar  registro");
+            new OperacionesUtiles().notificar(5);
         }
 
     }
