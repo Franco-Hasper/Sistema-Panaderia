@@ -18,3 +18,7 @@ Contenido:
 Diagrama entidad-relacion, modelo relacional y diagramas de clases.
 
 Importante: para poder acceder a los diagramas del enlace anterior, debe añadir draw.io a las extensiones de su navegador.
+
+
+#### Informacion adicional:
+Tenga en cuenta que este proyecto aun esta en desarrollo, por lo que posiblemente se añadan nuevas funciones y se modifiquen elementos, por otro lado cabe mencionar que todas las versiones de esta rama seran estables, es decir, sin problemas de funcionamiento generados por errores de compilado o ejecucion mas comunes presentes en este tipo de aplicaciones.
